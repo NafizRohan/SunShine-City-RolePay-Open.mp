@@ -1,0 +1,5 @@
+[11/2/2023 9:30:44 PM] [WARNING] mysql_connect: no password specified
+[11/2/2023 9:33:10 PM] [ERROR] error #130 while executing query "SELECT * FROM `users` WHERE `username` COLLATE latin1_general_cs = 'Nafiz_Smith' LIMIT 1": Incorrect file format 'users'
+[11/2/2023 9:33:10 PM] [ERROR] cache_get_row_count: no active cache
+[11/2/2023 9:33:10 PM] [ERROR] cache_delete: invalid cache id '0'
+[11/2/2023 9:35:39 PM] [ERROR] error #130 while executing query "INSERT INTO `users`(`username`, `password`, `gender`, `birthdate`, `skin`) VALUES ('Nafiz_Smith', 'nafiz', 1, '1/1/2018', 0)": Incorrect file format 'users'
