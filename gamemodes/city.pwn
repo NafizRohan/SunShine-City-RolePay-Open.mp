@@ -5,8 +5,22 @@
 #include "../gamemodes/modules/server/textdraws.pwn"
 
 #define SSCANF_NO_NICE_FEATURES
- 
-main(){}
+
+// Server Information
+
+#define SERVER_NAME         "Sunshine City RolePlay"
+#define SERVER_MODE         "Open.mp"
+#define SERVER_VERSION      "v1.0(beta)"
+#define SERVER_THEME        "{EAFF00}"
+#define DIALOG_TITLE        "{EAFF00}Sunshine City {FFFFFF} RolePlay"
+
+main()
+{
+    print("-------------------------------------------------");
+    print("| GameMode: Open.mp                             |");
+    print("| Developer: Nafiz & Sibbir                     |");
+    print("-------------------------------------------------");
+}
 
 native WP_Hash(buffer[], len, const str[]);
 #define strcpy(%0,%1)   strcat(((%0[0] = 0), %0), %1)
@@ -43,7 +57,7 @@ enum // PLAYER DIALOGS
     UNUSED_PLAYER_DIALOG
 };
  
- 
+new ValidUser[MAX_PLAYERS];
 static ReturnPlayerName(playerid)
 {
     new string[MAX_PLAYER_NAME];
@@ -103,6 +117,65 @@ HideRegisterTD(playerid)
     TextDrawHideForPlayer(playerid, box_email);
     TextDrawHideForPlayer(playerid, btn_register);
     TextDrawHideForPlayer(playerid, web_url);
+
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][0]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][1]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][2]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][3]);
+    CancelSelectTextDraw(playerid);
+}
+
+ShowLoginTD(playerid)
+{
+    TextDrawShowForPlayer(playerid, Background);
+    TextDrawShowForPlayer(playerid, Login_GTD[0]);
+    TextDrawShowForPlayer(playerid, Login_GTD[1]);
+    TextDrawShowForPlayer(playerid, Login_GTD[2]);
+    TextDrawShowForPlayer(playerid, Login_GTD[3]);
+    TextDrawShowForPlayer(playerid, Login_GTD[4]);
+    TextDrawShowForPlayer(playerid, Login_GTD[5]);
+    TextDrawShowForPlayer(playerid, Login_GTD[7]);
+    TextDrawShowForPlayer(playerid, Login_GTD[8]);
+    TextDrawShowForPlayer(playerid, Skin);
+    TextDrawShowForPlayer(playerid, Name);
+    TextDrawShowForPlayer(playerid, box_pass);
+    TextDrawShowForPlayer(playerid, box_gender);
+    TextDrawShowForPlayer(playerid, box_age);
+    TextDrawShowForPlayer(playerid, box_email);
+    TextDrawShowForPlayer(playerid, btn_register);
+    TextDrawShowForPlayer(playerid, web_url);
+    
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "");
+    PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][2], 0.250, 1.500);
+    PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][3], 0.270, 1.500);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][0]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][1]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][2]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][3]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][4]);
+    SelectTextDraw(playerid, 0xFF1E05FF);
+}
+
+HideLoginTD(playerid)
+{
+    TextDrawHideForPlayer(playerid, Login_GTD[0]);
+    TextDrawHideForPlayer(playerid, Login_GTD[1]);
+    TextDrawHideForPlayer(playerid, Login_GTD[2]);
+    TextDrawHideForPlayer(playerid, Login_GTD[3]);
+    TextDrawHideForPlayer(playerid, Login_GTD[4]);
+    TextDrawHideForPlayer(playerid, Login_GTD[5]);
+    TextDrawHideForPlayer(playerid, Login_GTD[7]);
+    TextDrawHideForPlayer(playerid, Login_GTD[8]);
+    TextDrawHideForPlayer(playerid, Background);
+    TextDrawHideForPlayer(playerid, Skin);
+    TextDrawHideForPlayer(playerid, Name);
+    TextDrawHideForPlayer(playerid, box_pass);
+    TextDrawHideForPlayer(playerid, box_gender);
+    TextDrawHideForPlayer(playerid, box_age);
+    TextDrawHideForPlayer(playerid, box_email);
+    TextDrawHideForPlayer(playerid, btn_register);
+    TextDrawHideForPlayer(playerid, web_url);
+
     PlayerTextDrawHide(playerid, Login_PTD[playerid][0]);
     PlayerTextDrawHide(playerid, Login_PTD[playerid][1]);
     PlayerTextDrawHide(playerid, Login_PTD[playerid][2]);
@@ -126,8 +199,9 @@ public OnGameModeInit()
         print("[mysql]: Success connect to mysql database.");
     }
 
-
     CreateLoginTDGlobal();
+    SendRconCommand("hostname "SERVER_NAME"");
+    SetGameModeText(SERVER_MODE);
     return 1;
 }
  
@@ -237,8 +311,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 return 1;
             }
         }
-
-
     }
     return 1;
 }
@@ -270,44 +342,60 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
 {
     if(clickedid == box_pass)
     {
-        ShowDialogToPlayer(playerid, DIALOG_PLAYER_REGISTER);
+        if(ValidUser[playerid] == 0)  
+        {
+            ShowDialogToPlayer(playerid, DIALOG_PLAYER_REGISTER);
+        }
         return 1;
     }
     if(clickedid == box_gender)
     {
-        ShowDialogToPlayer(playerid, DIALOG_SELECT_GENDER);
+        if(ValidUser[playerid] == 0)  
+        {
+            ShowDialogToPlayer(playerid, DIALOG_SELECT_GENDER);
+        }
         return 1;
     }
     if(clickedid == box_age)
     {
-        ShowDialogToPlayer(playerid, DIALOG_PLAYER_AGE);
+        if(ValidUser[playerid] == 0)  
+        {
+            ShowDialogToPlayer(playerid, DIALOG_PLAYER_AGE);
+        }
         return 1;
     }
     if(clickedid == box_email)
     {
-        ShowDialogToPlayer(playerid, DIALOG_PLAYER_EMAIL);
+        if(ValidUser[playerid] == 0)  
+        {
+            ShowDialogToPlayer(playerid, DIALOG_PLAYER_EMAIL);\
+        }
         return 1;
     }
     if(clickedid == btn_register)
     {
-        if(isnull(gPlayerData[playerid][pTempPass]))
-        {
-            return SendClientMessage(playerid, -1, "Set a password first.");
+        if(ValidUser[playerid] == 0)  
+        {   
+            if(isnull(gPlayerData[playerid][pTempPass]))
+            {
+                return SendClientMessage(playerid, -1, "Set a password first.");
+            }
+            if(!gPlayerData[playerid][pAge])
+            {
+                return SendClientMessage(playerid, -1, "Set your age first.");
+            }
+            if(!gPlayerData[playerid][pEmail])
+            {
+                return SendClientMessage(playerid, -1, "Set a email first.");
+            }
+            if(!gPlayerData[playerid][pGender])
+            {
+                return SendClientMessage(playerid, -1, "Set your gender first.");
+            }
+            mysql_format(database, QueryOutput, sizeof(QueryOutput), "INSERT INTO `users` (username, password, age, gender, email) VALUES(\"%s\", \"%s\", %i, %i, \"%s\")", ReturnPlayerName(playerid), gPlayerData[playerid][pTempPass], gPlayerData[playerid][pAge], gPlayerData[playerid][pGender], gPlayerData[playerid][pEmail]);
+            mysql_tquery(database, QueryOutput, "AfterRegister", "i", playerid);
         }
-        if(!gPlayerData[playerid][pAge])
-        {
-            return SendClientMessage(playerid, -1, "Set your age first.");
-        }
-        if(!gPlayerData[playerid][pEmail])
-        {
-            return SendClientMessage(playerid, -1, "Set a email first.");
-        }
-        if(!gPlayerData[playerid][pGender])
-        {
-            return SendClientMessage(playerid, -1, "Set your gender first.");
-        }
-        mysql_format(database, QueryOutput, sizeof(QueryOutput), "INSERT INTO `users` (username, password, age, gender, email) VALUES(\"%s\", \"%s\", %i, %i, \"%s\")", ReturnPlayerName(playerid), gPlayerData[playerid][pTempPass], gPlayerData[playerid][pAge], gPlayerData[playerid][pGender], gPlayerData[playerid][pEmail]);
-        mysql_tquery(database, QueryOutput, "AfterRegister", "i", playerid);
+        return 1;
     }
     return 1;
 }
@@ -420,6 +508,65 @@ LoadUserAccount(playerid)
     SetPlayerToSpawn(playerid);
 }
 
+GetPlayerLastLogin(playerid)
+{
+    new Cache:data, lastlogin[128];
+    mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT lastlogin from users WHERE username = \"%s\"", ReturnPlayerName(playerid));
+    data = mysql_query(database, QueryOutput);
+    if(cache_num_rows())
+    {
+        for(new i = 0; i < cache_num_rows(); i ++)
+        {
+            cache_get_value_name(i,"lastlogin", lastlogin, 128);
+        }
+    }
+    new string[128];
+    format(string, sizeof(string), "%s", lastlogin);
+    cache_delete(data);
+    return string;
+}
+
+GetPlayerEmail(playerid)
+{
+    new Cache:data, email[64];
+    mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT email from users WHERE username = \"%s\"", ReturnPlayerName(playerid));
+    data = mysql_query(database, QueryOutput);
+    if(cache_num_rows())
+    {
+        for(new i = 0; i < cache_num_rows(); i ++)
+        {
+            cache_get_value_name(i,"email", email, 64);
+        }
+    }
+    new string[128];
+    format(string, sizeof(string), "%s", email);
+    cache_delete(data);
+    return string;
+}
+
+GetPlayerGender(playerid)
+{
+    new Cache:data, gender;
+    mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT email from users WHERE username = \"%s\"", ReturnPlayerName(playerid));
+    data = mysql_query(database, QueryOutput);
+    if(cache_num_rows())
+    {
+        for(new i = 0; i < cache_num_rows(); i ++)
+        {
+            cache_get_value_name_int(i,"gender", gender);
+        }
+    }
+    new string[128];
+    switch(gender)
+    {
+        case 0: format(string, sizeof(string), "Male");
+        case 1: format(string, sizeof(string), "FeMale");
+    }
+    
+    cache_delete(data);
+    return string;
+}
+
 forward CheckValidUser(playerid);
 public CheckValidUser(playerid)
 {
@@ -427,10 +574,23 @@ public CheckValidUser(playerid)
     cache_get_row_count(result);
     if(!result)
     {
+        ValidUser[playerid] = 0;
         ShowRegisterTD(playerid);
         return 1;
     }
-    LoadUserAccount(playerid);
+    ValidUser[playerid] = 1;
+    new lastlogin[128], email[64], gender[24];
+    
+    format(gender, sizeof(gender), "%s", GetPlayerGender(playerid));
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][1], gender);
+
+    format(lastlogin, sizeof(lastlogin), "%s", GetPlayerLastLogin(playerid));
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][2], lastlogin);
+
+    format(email, sizeof(email), "%s", GetPlayerEmail(playerid));
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][3], email);
+    
+    ShowLoginTD(playerid);
     return 1;
 }
 

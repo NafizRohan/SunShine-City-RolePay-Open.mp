@@ -21,10 +21,20 @@ SET time_zone = "+00:00";
 -- Table structure for table `users`
 --
 
+CREATE TABLE `accounts`(
+  `master_id` int(11) NOT NULL,
+  `master_name` varchar(64) NOT NULL DEFAULT 'None',
+  `password` varchar(129) NOT NULL,
+  `user_1` int DEFAULT '0',
+  `user_2` int DEFAULT '0',
+  `user_3` int DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(24) NOT NULL,
   `password` varchar(129) NOT NULL,
+  `lastlogin` datetime DEFAULT NULL,
   `gender` int(1) NOT NULL DEFAULT 1,
   `age` int(3) NOT NULL,
   `skin` int(3) NOT NULL DEFAULT 299,
@@ -39,7 +49,8 @@ CREATE TABLE `users` (
   `health` float DEFAULT 100.0,
   `armour` float DEFAULT 100.0,
   `cash` int(11) DEFAULT 5000,
-  `bank` int(11) DEFAULT 5000
+  `bank` int(11) DEFAULT 5000,
+  `masteracc` int(11) NOT NULL DEFAULT 0;
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --

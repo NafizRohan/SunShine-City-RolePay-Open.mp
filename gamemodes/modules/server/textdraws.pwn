@@ -9,7 +9,7 @@ new Text: box_email;
 new Text: btn_register;
 new Text: web_url;
 new Text: Login_GTD[9];
-new PlayerText: Login_PTD[MAX_PLAYERS][4];
+new PlayerText: Login_PTD[MAX_PLAYERS][5];
 
 CreateLoginTDGlobal()
 {
@@ -258,4 +258,14 @@ CreateLoginTDPlayer(playerid)
     PlayerTextDrawBackgroundColour(playerid, Login_PTD[playerid][3], 150);
     PlayerTextDrawFont(playerid, Login_PTD[playerid][3], TEXT_DRAW_FONT_1);
     PlayerTextDrawSetProportional(playerid, Login_PTD[playerid][3], true);
+
+    Login_PTD[playerid][4] = CreatePlayerTextDraw(playerid, 337.000, 206.000, "Last Login_:");
+    PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][4], 0.219, 1.799);
+    PlayerTextDrawAlignment(playerid, Login_PTD[playerid][4], TEXT_DRAW_ALIGN_CENTER);
+    PlayerTextDrawColour(playerid, Login_PTD[playerid][4], -1);
+    PlayerTextDrawSetShadow(playerid, Login_PTD[playerid][4], 1);
+    PlayerTextDrawSetOutline(playerid, Login_PTD[playerid][4], 1);
+    PlayerTextDrawBackgroundColour(playerid, Login_PTD[playerid][4], 150);
+    PlayerTextDrawFont(playerid, Login_PTD[playerid][4], TEXT_DRAW_FONT_2);
+    PlayerTextDrawSetProportional(playerid, Login_PTD[playerid][4], true);
 }
