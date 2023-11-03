@@ -1,0 +1,9 @@
+../gamemodes/modules/server/textdraws.pwn(132) : ïðåäóïðåæäåíèå 234: óñòàðåâøàÿ ôóíêöèÿ (èäåíòèôèêàòîð "TextDrawSetPreviewVehCol") Use `TextDrawSetPreviewVehicleColours`
+
+E:\.SunShine City\gamemodes\city.pwn(375) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+E:\.SunShine City\gamemodes\city.pwn(375) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+E:\.SunShine City\gamemodes\city.pwn(375) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+Pawn compiler 3.2.3664	 	 	Copyright (c) 1997-2017, ITB CompuPhase
+
+
+Ïðåäóïðåæäåíèé:4.

@@ -13,6 +13,19 @@ new PlayerText: Login_PTD[MAX_PLAYERS][4];
 
 CreateLoginTDGlobal()
 {
+    Background = TextDrawCreate(162.000, 121.000, "_");
+    TextDrawLetterSize(Background, 0.070, 25.600);
+    TextDrawTextSize(Background, 480.000, 0.000);
+    TextDrawAlignment(Background, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(Background, -1);
+    TextDrawUseBox(Background, true);
+    TextDrawBoxColour(Background, 255);
+    TextDrawSetShadow(Background, 1);
+    TextDrawSetOutline(Background, 1);
+    TextDrawBackgroundColour(Background, 150);
+    TextDrawFont(Background, TEXT_DRAW_FONT_1);
+    TextDrawSetProportional(Background, true);
+    
     Login_GTD[0] = TextDrawCreate(317.000, 121.000, "SunShine City");
     TextDrawLetterSize(Login_GTD[0], 0.459, 2.899);
     TextDrawAlignment(Login_GTD[0], TEXT_DRAW_ALIGN_CENTER);
@@ -103,18 +116,7 @@ CreateLoginTDGlobal()
     TextDrawFont(Login_GTD[8], TEXT_DRAW_FONT_SPRITE_DRAW);
     TextDrawSetProportional(Login_GTD[8], true);
 
-    Background = TextDrawCreate(162.000, 121.000, "_");
-    TextDrawLetterSize(Background, 0.070, 25.600);
-    TextDrawTextSize(Background, 480.000, 0.000);
-    TextDrawAlignment(Background, TEXT_DRAW_ALIGN_LEFT);
-    TextDrawColour(Background, -1);
-    TextDrawUseBox(Background, true);
-    TextDrawBoxColour(Background, 255);
-    TextDrawSetShadow(Background, 1);
-    TextDrawSetOutline(Background, 1);
-    TextDrawBackgroundColour(Background, 150);
-    TextDrawFont(Background, TEXT_DRAW_FONT_1);
-    TextDrawSetProportional(Background, true);
+    
 
     Skin = TextDrawCreate(133.000, 141.000, "_");
     TextDrawTextSize(Skin, 160.000, 160.000);

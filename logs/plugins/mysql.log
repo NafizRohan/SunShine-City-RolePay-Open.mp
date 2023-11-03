@@ -3,3 +3,81 @@
 [11/2/2023 9:33:10 PM] [ERROR] cache_get_row_count: no active cache
 [11/2/2023 9:33:10 PM] [ERROR] cache_delete: invalid cache id '0'
 [11/2/2023 9:35:39 PM] [ERROR] error #130 while executing query "INSERT INTO `users`(`username`, `password`, `gender`, `birthdate`, `skin`) VALUES ('Nafiz_Smith', 'nafiz', 1, '1/1/2018', 0)": Incorrect file format 'users'
+[11/3/2023 4:02:19 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 4:02:55 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:19 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:20 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:21 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:23 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:29 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:45 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:46 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:50 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:07:56 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:02 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:03 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:05 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:06 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:08 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:09 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:10 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:10 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:11 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:12 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:13 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:13 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:14 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:14 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:15 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:16 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:08:17 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 4:13:12 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 5:23:55 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 5:25:21 PM] [ERROR] error #130 while executing query "SELECT * FROM users WHERE username = Nafiz_Smith": Incorrect file format 'users'
+[11/3/2023 5:27:11 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 5:27:52 PM] [ERROR] error #1054 while executing query "SELECT * FROM samp.users WHERE username = Nafiz_Smith": Unknown column 'Nafiz_Smith' in 'where clause'
+[11/3/2023 5:28:59 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 5:31:05 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 5:32:54 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 6:12:05 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 6:16:18 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 6:20:08 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 6:20:56 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 8:09:16 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'pos_x' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'pos_y' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'pos_z' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'pos_a' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'camera_x' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'camera_y' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'camera_z' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'health' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_float: field 'armour' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_int: field 'cash' not found
+[11/3/2023 8:09:49 PM] [ERROR] cache_get_value_name_int: field 'bank' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'pos_x' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'pos_y' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'pos_z' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'pos_a' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'camera_x' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'camera_y' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'camera_z' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'health' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_float: field 'armour' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_int: field 'cash' not found
+[11/3/2023 8:09:58 PM] [ERROR] cache_get_value_name_int: field 'bank' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'pos_x' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'pos_y' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'pos_z' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'pos_a' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'camera_x' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'camera_y' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'camera_z' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'health' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_float: field 'armour' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_int: field 'cash' not found
+[11/3/2023 8:10:05 PM] [ERROR] cache_get_value_name_int: field 'bank' not found
+[11/3/2023 8:14:35 PM] [ERROR] cache_get_value_name_float: field 'pos_a' not found
+[11/3/2023 8:17:54 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 8:40:41 PM] [WARNING] mysql_connect: no password specified
+[11/3/2023 8:40:47 PM] [WARNING] mysql_connect: no password specified

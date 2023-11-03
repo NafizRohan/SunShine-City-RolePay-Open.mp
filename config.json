@@ -76,7 +76,7 @@
     },
     "password": "",
     "pawn": {
-        "legacy_plugins": ["mysql"],
+        "legacy_plugins": ["mysql", "Whirlpool"],
         "main_scripts": [
             "city"
         ],

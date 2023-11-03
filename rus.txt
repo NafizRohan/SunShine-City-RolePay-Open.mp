@@ -1,0 +1,9 @@
+../gamemodes/modules/server/textdraws.pwn(132) : ïðåäóïðåæäåíèå 200: ñèìâîë "TextDrawSetPreviewVehicleColour" îáðåçàí äî 31 ñèìâîëîâ
+../gamemodes/modules/server/textdraws.pwn(132) : îøèáêà 017: íåîáúÿâëåííûé ñèìâîë "TextDrawSetPreviewVehicleColour"
+E:\.SunShine City\gamemodes\city.pwn(375) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+E:\.SunShine City\gamemodes\city.pwn(375) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+E:\.SunShine City\gamemodes\city.pwn(375) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+Pawn compiler 3.2.3664	 	 	Copyright (c) 1997-2016, ITB CompuPhase
+
+
+Îøèáîê:1.

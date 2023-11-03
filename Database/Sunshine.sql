@@ -23,12 +23,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `username` varchar NOT NULL,
-  `password` varchar NOT NULL,
+  `username` varchar(24) NOT NULL,
+  `password` varchar(129) NOT NULL,
   `gender` int(1) NOT NULL DEFAULT 1,
   `age` int(3) NOT NULL,
-  `skin` int(3) NOT NULL DEFAULT 299
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `skin` int(3) NOT NULL DEFAULT 299,
+  `email` varchar(64) NOT NULL,
+  `pos_x` float DEFAULT 0.0,
+  `pos_y` float DEFAULT 0.0,
+  `pos_z` float DEFAULT 0.0,
+  `camera_x` float DEFAULT 0.0,
+  `camera_y` float DEFAULT 0.0,
+  `camera_z` float DEFAULT 0.0,
+  `facing_angle` float DEFAULT 0.0,
+  `health` float DEFAULT 100.0,
+  `armour` float DEFAULT 100.0,
+  `cash` int(11) DEFAULT 5000,
+  `bank` int(11) DEFAULT 5000
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Indexes for dumped tables
@@ -48,7 +60,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 COMMIT;
 
 
