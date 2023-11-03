@@ -495,7 +495,7 @@ LoadUserAccount(playerid)
     cache_get_value_name_float(0, "health", gPlayerData[playerid][pHealth]);
     cache_get_value_name_float(0, "armour", gPlayerData[playerid][pArmour]);
     cache_get_value_name_int(0, "cash", gPlayerData[playerid][pCash]);
-    cache_get_value_name_int(0, "bank", gPlayerData[playerid][pBank]);
+    cache_get_value_name_int(0, "bank", gPlayerData[playerid][pBank]); 
     // Loading Other Stuffs
     cache_get_value_name_int(0, "skin", gPlayerData[playerid][pSkin]);
     cache_get_value_name_int(0, "age", gPlayerData[playerid][pAge]);
