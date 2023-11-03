@@ -1994,3 +1994,28 @@ Loaded 24 component(s) from E:\.SunShine City\components
 [2023-11-03T20:40:47+0600] [Info] AMX (63480568) loaded
 [2023-11-03T20:40:47+0600] [Info] [mysql]: Success connect to mysql database.
 [2023-11-03T20:40:47+0600] [Info] Legacy Network started on port 7777
+[2023-11-03T20:40:52+0600] [Info] [connection] incoming connection: 127.0.0.1:57680 id: 0
+[2023-11-03T20:40:52+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-03T20:40:53+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-03T20:41:10+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-03T20:42:00+0600] [Info] [connection] incoming connection: 127.0.0.1:59839 id: 0
+[2023-11-03T20:42:00+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-03T20:47:09+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-03T20:47:15+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-03T20:47:15+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-03T20:47:15+0600] [Info]  
+[2023-11-03T20:47:15+0600] [Info]  ====================
+[2023-11-03T20:47:15+0600] [Info]  
+[2023-11-03T20:47:15+0600] [Info]   Whirlpool unloaded
+[2023-11-03T20:47:15+0600] [Info]  
+[2023-11-03T20:47:15+0600] [Info]  ====================
+[2023-11-03T20:47:15+0600] [Info]  
+[2023-11-03T20:47:15+0600] [Info] plugin.mysql: Unloading plugin...
+[2023-11-03T20:47:15+0600] [Info] plugin.mysql: Plugin unloaded.
+[2023-11-03T20:47:15+0600] [Info] 
+[2023-11-03T20:47:15+0600] [Info]  ===============================
+[2023-11-03T20:47:15+0600] [Info] 
+[2023-11-03T20:47:15+0600] [Info]     sscanf component unloaded.  
+[2023-11-03T20:47:15+0600] [Info] 
+[2023-11-03T20:47:15+0600] [Info]  ===============================
+[2023-11-03T20:47:15+0600] [Info] 

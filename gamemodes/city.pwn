@@ -71,6 +71,11 @@ ShowRegisterTD(playerid)
     TextDrawShowForPlayer(playerid, box_email);
     TextDrawShowForPlayer(playerid, btn_register);
     TextDrawShowForPlayer(playerid, web_url);
+    
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "");
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][1], "");
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][2], "");
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][3], "");
     PlayerTextDrawShow(playerid, Login_PTD[playerid][0]);
     PlayerTextDrawShow(playerid, Login_PTD[playerid][1]);
     PlayerTextDrawShow(playerid, Login_PTD[playerid][2]);
@@ -102,10 +107,6 @@ HideRegisterTD(playerid)
     PlayerTextDrawHide(playerid, Login_PTD[playerid][1]);
     PlayerTextDrawHide(playerid, Login_PTD[playerid][2]);
     PlayerTextDrawHide(playerid, Login_PTD[playerid][3]);
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "");
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][1], "");
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][2], "");
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][3], "");
     CancelSelectTextDraw(playerid);
 }
  
