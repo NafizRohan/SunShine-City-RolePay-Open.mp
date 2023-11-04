@@ -3296,3 +3296,1096 @@ Loaded 24 component(s) from E:\.SunShine City\components
 [2023-11-03T23:40:24+0600] [Info] 
 [2023-11-03T23:40:24+0600] [Info]  ===============================
 [2023-11-03T23:40:24+0600] [Info] 
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T16:47:05+0600] [Info] 
+[2023-11-04T16:47:05+0600] [Info]  ===============================
+[2023-11-04T16:47:05+0600] [Info] 
+[2023-11-04T16:47:05+0600] [Info]      sscanf component loaded.   
+[2023-11-04T16:47:05+0600] [Info] 
+[2023-11-04T16:47:05+0600] [Info]          Version: 2.13.8
+[2023-11-04T16:47:05+0600] [Info] 
+[2023-11-04T16:47:05+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T16:47:05+0600] [Info] 
+[2023-11-04T16:47:05+0600] [Info]  ===============================
+[2023-11-04T16:47:05+0600] [Info] 
+[2023-11-04T16:47:05+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T16:47:05+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T16:47:05+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T16:47:05+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T16:47:05+0600] [Info] Loading plugin: mysql
+[2023-11-04T16:47:06+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T16:47:06+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T16:47:06+0600] [Info]  
+[2023-11-04T16:47:06+0600] [Info]  ==================
+[2023-11-04T16:47:06+0600] [Info]  
+[2023-11-04T16:47:06+0600] [Info]   Whirlpool loaded
+[2023-11-04T16:47:06+0600] [Info]  
+[2023-11-04T16:47:06+0600] [Info]  ==================
+[2023-11-04T16:47:06+0600] [Info]  
+[2023-11-04T16:47:07+0600] [Info] AMX (60798560) loaded
+[2023-11-04T16:47:07+0600] [Info] [mysql]: Success connect to mysql database.
+[2023-11-04T16:47:07+0600] [Info] -------------------------------------------------
+[2023-11-04T16:47:07+0600] [Info] | GameMode: Open.mp                             |
+[2023-11-04T16:47:07+0600] [Info] | Developer: Nafiz & Sibbir                     |
+[2023-11-04T16:47:07+0600] [Info] -------------------------------------------------
+[2023-11-04T16:47:07+0600] [Info] Legacy Network started on port 7777
+[2023-11-04T16:47:14+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-04T16:48:59+0600] [Info] [connection] incoming connection: 127.0.0.1:58134 id: 0
+[2023-11-04T16:48:59+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T16:49:13+0600] [Info] [death] Nafiz_Smith died 255
+[2023-11-04T16:53:37+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T16:53:38+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T16:53:38+0600] [Info]  
+[2023-11-04T16:53:38+0600] [Info]  ====================
+[2023-11-04T16:53:38+0600] [Info]  
+[2023-11-04T16:53:38+0600] [Info]   Whirlpool unloaded
+[2023-11-04T16:53:38+0600] [Info]  
+[2023-11-04T16:53:38+0600] [Info]  ====================
+[2023-11-04T16:53:38+0600] [Info]  
+[2023-11-04T16:53:38+0600] [Info] plugin.mysql: Unloading plugin...
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T16:53:46+0600] [Info] 
+[2023-11-04T16:53:46+0600] [Info]  ===============================
+[2023-11-04T16:53:46+0600] [Info] 
+[2023-11-04T16:53:46+0600] [Info]      sscanf component loaded.   
+[2023-11-04T16:53:46+0600] [Info] 
+[2023-11-04T16:53:46+0600] [Info]          Version: 2.13.8
+[2023-11-04T16:53:46+0600] [Info] 
+[2023-11-04T16:53:46+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T16:53:46+0600] [Info] 
+[2023-11-04T16:53:46+0600] [Info]  ===============================
+[2023-11-04T16:53:46+0600] [Info] 
+[2023-11-04T16:53:46+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T16:53:46+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T16:53:46+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T16:53:46+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T16:53:46+0600] [Info] Loading plugin: mysql
+[2023-11-04T16:53:46+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T16:53:46+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T16:53:47+0600] [Info]  
+[2023-11-04T16:53:47+0600] [Info]  ==================
+[2023-11-04T16:53:47+0600] [Info]  
+[2023-11-04T16:53:47+0600] [Info]   Whirlpool loaded
+[2023-11-04T16:53:47+0600] [Info]  
+[2023-11-04T16:53:47+0600] [Info]  ==================
+[2023-11-04T16:53:47+0600] [Info]  
+[2023-11-04T16:53:47+0600] [Info] Could not find:
+
+	 gamemodes\city.amx 
+While attempting to load a PAWN script, a file-not-found error was
+encountered.  This could be caused by many things:
+
+ * The wrong filename was given.
+ * The wrong gamemodes path was given.
+ * The server was launched from a different directory, making relative paths
+   relative to the wrong place (and thus wrong).
+ * You didn't copy the file to the correct directory or server.
+ * The compilation failed, leading to no output file.
+ * `-l` or `-a` were used to compile, which output intermediate steps for
+   inspecting, rather than a full script.
+ * Anything else, really just check the file is at the path given.
+
+[2023-11-04T16:53:47+0600] [Info] Legacy Network started on port 7777
+[2023-11-04T16:53:52+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-04T16:54:10+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T16:54:10+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T16:54:10+0600] [Info]  
+[2023-11-04T16:54:10+0600] [Info]  ====================
+[2023-11-04T16:54:10+0600] [Info]  
+[2023-11-04T16:54:10+0600] [Info]   Whirlpool unloaded
+[2023-11-04T16:54:10+0600] [Info]  
+[2023-11-04T16:54:10+0600] [Info]  ====================
+[2023-11-04T16:54:10+0600] [Info]  
+[2023-11-04T16:54:10+0600] [Info] plugin.mysql: Unloading plugin...
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T16:55:39+0600] [Info] 
+[2023-11-04T16:55:39+0600] [Info]  ===============================
+[2023-11-04T16:55:39+0600] [Info] 
+[2023-11-04T16:55:39+0600] [Info]      sscanf component loaded.   
+[2023-11-04T16:55:39+0600] [Info] 
+[2023-11-04T16:55:39+0600] [Info]          Version: 2.13.8
+[2023-11-04T16:55:39+0600] [Info] 
+[2023-11-04T16:55:39+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T16:55:39+0600] [Info] 
+[2023-11-04T16:55:39+0600] [Info]  ===============================
+[2023-11-04T16:55:39+0600] [Info] 
+[2023-11-04T16:55:39+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T16:55:39+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T16:55:39+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T16:55:39+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T16:55:39+0600] [Info] Loading plugin: mysql
+[2023-11-04T16:55:39+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T16:55:39+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T16:55:39+0600] [Info]  
+[2023-11-04T16:55:40+0600] [Info]  ==================
+[2023-11-04T16:55:40+0600] [Info]  
+[2023-11-04T16:55:40+0600] [Info]   Whirlpool loaded
+[2023-11-04T16:55:40+0600] [Info]  
+[2023-11-04T16:55:40+0600] [Info]  ==================
+[2023-11-04T16:55:40+0600] [Info]  
+[2023-11-04T16:55:40+0600] [Info] AMX (56288360) loaded
+[2023-11-04T16:55:40+0600] [Info] [mysql]: Success connect to mysql database.
+[2023-11-04T16:55:40+0600] [Info] -------------------------------------------------
+[2023-11-04T16:55:40+0600] [Info] | GameMode: Open.mp                             |
+[2023-11-04T16:55:40+0600] [Info] | Developer: Nafiz & Sibbir                     |
+[2023-11-04T16:55:40+0600] [Info] -------------------------------------------------
+[2023-11-04T16:55:40+0600] [Info] Legacy Network started on port 7777
+[2023-11-04T16:55:45+0600] [Info] [connection] incoming connection: 127.0.0.1:64583 id: 0
+[2023-11-04T16:55:45+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T16:55:45+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-04T16:56:09+0600] [Info] [death] Nafiz_Smith died 255
+[2023-11-04T16:56:19+0600] [Info] [death] Nafiz_Smith died 255
+[2023-11-04T16:57:50+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-04T16:58:33+0600] [Info] [connection] incoming connection: 127.0.0.1:53362 id: 0
+[2023-11-04T16:58:33+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T16:58:39+0600] [Info] [death] Nafiz_Smith died 255
+[2023-11-04T16:59:51+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T16:59:52+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T16:59:52+0600] [Info]  
+[2023-11-04T16:59:52+0600] [Info]  ====================
+[2023-11-04T16:59:52+0600] [Info]  
+[2023-11-04T16:59:52+0600] [Info]   Whirlpool unloaded
+[2023-11-04T16:59:52+0600] [Info]  
+[2023-11-04T16:59:52+0600] [Info]  ====================
+[2023-11-04T16:59:52+0600] [Info]  
+[2023-11-04T16:59:52+0600] [Info] plugin.mysql: Unloading plugin...
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T17:00:09+0600] [Info] 
+[2023-11-04T17:00:09+0600] [Info]  ===============================
+[2023-11-04T17:00:09+0600] [Info] 
+[2023-11-04T17:00:09+0600] [Info]      sscanf component loaded.   
+[2023-11-04T17:00:09+0600] [Info] 
+[2023-11-04T17:00:09+0600] [Info]          Version: 2.13.8
+[2023-11-04T17:00:09+0600] [Info] 
+[2023-11-04T17:00:09+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T17:00:09+0600] [Info] 
+[2023-11-04T17:00:09+0600] [Info]  ===============================
+[2023-11-04T17:00:09+0600] [Info] 
+[2023-11-04T17:00:09+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T17:00:09+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T17:00:09+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T17:00:09+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T17:00:09+0600] [Info] Loading plugin: mysql
+[2023-11-04T17:00:10+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T17:00:10+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T17:00:10+0600] [Info]  
+[2023-11-04T17:00:10+0600] [Info]  ==================
+[2023-11-04T17:00:10+0600] [Info]  
+[2023-11-04T17:00:10+0600] [Info]   Whirlpool loaded
+[2023-11-04T17:00:10+0600] [Info]  
+[2023-11-04T17:00:10+0600] [Info]  ==================
+[2023-11-04T17:00:10+0600] [Info]  
+[2023-11-04T17:00:10+0600] [Info] AMX (48343832) loaded
+[2023-11-04T17:00:10+0600] [Info] [mysql]: Success connect to mysql database.
+[2023-11-04T17:00:10+0600] [Info] -------------------------------------------------
+[2023-11-04T17:00:10+0600] [Info] | GameMode: Open.mp                             |
+[2023-11-04T17:00:10+0600] [Info] | Developer: Nafiz & Sibbir                     |
+[2023-11-04T17:00:10+0600] [Info] -------------------------------------------------
+[2023-11-04T17:00:10+0600] [Info] Legacy Network started on port 7777
+[2023-11-04T17:00:16+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-04T17:00:19+0600] [Info] [connection] incoming connection: 127.0.0.1:58712 id: 0
+[2023-11-04T17:00:19+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:00:37+0600] [Info] [death] Nafiz_Smith died 255
+[2023-11-04T17:00:41+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T17:01:07+0600] [Info] 
+[2023-11-04T17:01:07+0600] [Info]  ===============================
+[2023-11-04T17:01:07+0600] [Info] 
+[2023-11-04T17:01:07+0600] [Info]      sscanf component loaded.   
+[2023-11-04T17:01:07+0600] [Info] 
+[2023-11-04T17:01:07+0600] [Info]          Version: 2.13.8
+[2023-11-04T17:01:07+0600] [Info] 
+[2023-11-04T17:01:07+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T17:01:07+0600] [Info] 
+[2023-11-04T17:01:07+0600] [Info]  ===============================
+[2023-11-04T17:01:07+0600] [Info] 
+[2023-11-04T17:01:07+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T17:01:07+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T17:01:07+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T17:01:07+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T17:01:07+0600] [Info] Loading plugin: mysql
+[2023-11-04T17:01:07+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T17:01:07+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T17:01:07+0600] [Info]  
+[2023-11-04T17:01:07+0600] [Info]  ==================
+[2023-11-04T17:01:07+0600] [Info]  
+[2023-11-04T17:01:07+0600] [Info]   Whirlpool loaded
+[2023-11-04T17:01:07+0600] [Info]  
+[2023-11-04T17:01:07+0600] [Info]  ==================
+[2023-11-04T17:01:07+0600] [Info]  
+[2023-11-04T17:01:07+0600] [Info] AMX (58963208) loaded
+[2023-11-04T17:01:07+0600] [Info] [mysql]: Success connect to mysql database.
+[2023-11-04T17:01:07+0600] [Info] -------------------------------------------------
+[2023-11-04T17:01:07+0600] [Info] | GameMode: Open.mp                             |
+[2023-11-04T17:01:07+0600] [Info] | Developer: Nafiz & Sibbir                     |
+[2023-11-04T17:01:07+0600] [Info] -------------------------------------------------
+[2023-11-04T17:01:07+0600] [Error] Unable to start legacy network on port 7777. Port in use?
+[2023-11-04T17:01:09+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T17:01:09+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T17:01:09+0600] [Info]  
+[2023-11-04T17:01:09+0600] [Info]  ====================
+[2023-11-04T17:01:09+0600] [Info]  
+[2023-11-04T17:01:09+0600] [Info]   Whirlpool unloaded
+[2023-11-04T17:01:09+0600] [Info]  
+[2023-11-04T17:01:09+0600] [Info]  ====================
+[2023-11-04T17:01:09+0600] [Info]  
+[2023-11-04T17:01:09+0600] [Info] plugin.mysql: Unloading plugin...
+[2023-11-04T17:01:16+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T17:01:16+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T17:01:16+0600] [Info]  
+[2023-11-04T17:01:16+0600] [Info]  ====================
+[2023-11-04T17:01:16+0600] [Info]  
+[2023-11-04T17:01:16+0600] [Info]   Whirlpool unloaded
+[2023-11-04T17:01:16+0600] [Info]  
+[2023-11-04T17:01:16+0600] [Info]  ====================
+[2023-11-04T17:01:16+0600] [Info]  
+[2023-11-04T17:01:16+0600] [Info] plugin.mysql: Unloading plugin...
+[2023-11-04T17:01:16+0600] [Info] plugin.mysql: Plugin unloaded.
+[2023-11-04T17:01:16+0600] [Info] 
+[2023-11-04T17:01:16+0600] [Info]  ===============================
+[2023-11-04T17:01:16+0600] [Info] 
+[2023-11-04T17:01:16+0600] [Info]     sscanf component unloaded.  
+[2023-11-04T17:01:16+0600] [Info] 
+[2023-11-04T17:01:16+0600] [Info]  ===============================
+[2023-11-04T17:01:16+0600] [Info] 
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T17:01:20+0600] [Info] 
+[2023-11-04T17:01:20+0600] [Info]  ===============================
+[2023-11-04T17:01:20+0600] [Info] 
+[2023-11-04T17:01:20+0600] [Info]      sscanf component loaded.   
+[2023-11-04T17:01:20+0600] [Info] 
+[2023-11-04T17:01:20+0600] [Info]          Version: 2.13.8
+[2023-11-04T17:01:20+0600] [Info] 
+[2023-11-04T17:01:20+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T17:01:20+0600] [Info] 
+[2023-11-04T17:01:20+0600] [Info]  ===============================
+[2023-11-04T17:01:20+0600] [Info] 
+[2023-11-04T17:01:20+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T17:01:20+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T17:01:20+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T17:01:20+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T17:01:20+0600] [Info] Loading plugin: mysql
+[2023-11-04T17:01:20+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T17:01:20+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T17:01:20+0600] [Info]  
+[2023-11-04T17:01:20+0600] [Info]  ==================
+[2023-11-04T17:01:20+0600] [Info]  
+[2023-11-04T17:01:20+0600] [Info]   Whirlpool loaded
+[2023-11-04T17:01:20+0600] [Info]  
+[2023-11-04T17:01:20+0600] [Info]  ==================
+[2023-11-04T17:01:20+0600] [Info]  
+[2023-11-04T17:01:20+0600] [Info] AMX (64437032) loaded
+[2023-11-04T17:01:20+0600] [Info] [mysql]: Success connect to mysql database.
+[2023-11-04T17:01:20+0600] [Info] -------------------------------------------------
+[2023-11-04T17:01:20+0600] [Info] | GameMode: Open.mp                             |
+[2023-11-04T17:01:20+0600] [Info] | Developer: Nafiz & Sibbir                     |
+[2023-11-04T17:01:20+0600] [Info] -------------------------------------------------
+[2023-11-04T17:01:20+0600] [Info] Legacy Network started on port 7777
+[2023-11-04T17:01:26+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-04T17:02:03+0600] [Info] [connection] incoming connection: 127.0.0.1:57450 id: 0
+[2023-11-04T17:02:03+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:02:10+0600] [Info] [death] Nafiz_Smith died 255
+[2023-11-04T17:07:59+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-04T17:08:47+0600] [Info] [connection] incoming connection: 127.0.0.1:58555 id: 0
+[2023-11-04T17:08:47+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:09:58+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-04T17:10:42+0600] [Info] [connection] incoming connection: 127.0.0.1:56361 id: 0
+[2023-11-04T17:10:42+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:11:13+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-04T17:11:31+0600] [Info] [connection] incoming connection: 127.0.0.1:50813 id: 0
+[2023-11-04T17:11:31+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:13:43+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T17:13:43+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T17:13:43+0600] [Info]  
+[2023-11-04T17:13:43+0600] [Info]  ====================
+[2023-11-04T17:13:43+0600] [Info]  
+[2023-11-04T17:13:43+0600] [Info]   Whirlpool unloaded
+[2023-11-04T17:13:43+0600] [Info]  
+[2023-11-04T17:13:43+0600] [Info]  ====================
+[2023-11-04T17:13:43+0600] [Info]  
+[2023-11-04T17:13:43+0600] [Info] plugin.mysql: Unloading plugin...
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T17:13:57+0600] [Info] 
+[2023-11-04T17:13:57+0600] [Info]  ===============================
+[2023-11-04T17:13:57+0600] [Info] 
+[2023-11-04T17:13:57+0600] [Info]      sscanf component loaded.   
+[2023-11-04T17:13:57+0600] [Info] 
+[2023-11-04T17:13:57+0600] [Info]          Version: 2.13.8
+[2023-11-04T17:13:57+0600] [Info] 
+[2023-11-04T17:13:57+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T17:13:57+0600] [Info] 
+[2023-11-04T17:13:57+0600] [Info]  ===============================
+[2023-11-04T17:13:57+0600] [Info] 
+[2023-11-04T17:13:57+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T17:13:57+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T17:13:57+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T17:13:57+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T17:13:57+0600] [Info] Loading plugin: mysql
+[2023-11-04T17:13:57+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T17:13:57+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T17:13:57+0600] [Info]  
+[2023-11-04T17:13:57+0600] [Info]  ==================
+[2023-11-04T17:13:57+0600] [Info]  
+[2023-11-04T17:13:57+0600] [Info]   Whirlpool loaded
+[2023-11-04T17:13:57+0600] [Info]  
+[2023-11-04T17:13:57+0600] [Info]  ==================
+[2023-11-04T17:13:57+0600] [Info]  
+[2023-11-04T17:13:57+0600] [Info] AMX (64483032) loaded
+[2023-11-04T17:13:57+0600] [Info] [mysql]: Success connect to mysql database.
+[2023-11-04T17:13:57+0600] [Info] -------------------------------------------------
+[2023-11-04T17:13:57+0600] [Info] | GameMode: Open.mp                             |
+[2023-11-04T17:13:57+0600] [Info] | Developer: Nafiz & Sibbir                     |
+[2023-11-04T17:13:57+0600] [Info] -------------------------------------------------
+[2023-11-04T17:13:58+0600] [Info] Legacy Network started on port 7777
+[2023-11-04T17:14:03+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-04T17:14:49+0600] [Info] [connection] incoming connection: 127.0.0.1:59119 id: 0
+[2023-11-04T17:14:49+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:15:18+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-04T17:15:40+0600] [Info] [connection] incoming connection: 127.0.0.1:56733 id: 0
+[2023-11-04T17:15:40+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:20:39+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T17:20:39+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T17:20:39+0600] [Info]  
+[2023-11-04T17:20:39+0600] [Info]  ====================
+[2023-11-04T17:20:39+0600] [Info]  
+[2023-11-04T17:20:39+0600] [Info]   Whirlpool unloaded
+[2023-11-04T17:20:39+0600] [Info]  
+[2023-11-04T17:20:39+0600] [Info]  ====================
+[2023-11-04T17:20:39+0600] [Info]  
+[2023-11-04T17:20:39+0600] [Info] plugin.mysql: Unloading plugin...
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T17:20:47+0600] [Info] 
+[2023-11-04T17:20:47+0600] [Info]  ===============================
+[2023-11-04T17:20:47+0600] [Info] 
+[2023-11-04T17:20:47+0600] [Info]      sscanf component loaded.   
+[2023-11-04T17:20:47+0600] [Info] 
+[2023-11-04T17:20:47+0600] [Info]          Version: 2.13.8
+[2023-11-04T17:20:47+0600] [Info] 
+[2023-11-04T17:20:47+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T17:20:47+0600] [Info] 
+[2023-11-04T17:20:47+0600] [Info]  ===============================
+[2023-11-04T17:20:47+0600] [Info] 
+[2023-11-04T17:20:47+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T17:20:47+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T17:20:47+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T17:20:47+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T17:20:47+0600] [Info] Loading plugin: mysql
+[2023-11-04T17:20:48+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T17:20:48+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T17:20:48+0600] [Info]  
+[2023-11-04T17:20:48+0600] [Info]  ==================
+[2023-11-04T17:20:48+0600] [Info]  
+[2023-11-04T17:20:48+0600] [Info]   Whirlpool loaded
+[2023-11-04T17:20:48+0600] [Info]  
+[2023-11-04T17:20:48+0600] [Info]  ==================
+[2023-11-04T17:20:48+0600] [Info]  
+[2023-11-04T17:20:48+0600] [Info] AMX (71879808) loaded
+[2023-11-04T17:20:48+0600] [Info] [mysql]: Success connect to mysql database.
+[2023-11-04T17:20:48+0600] [Info] -------------------------------------------------
+[2023-11-04T17:20:48+0600] [Info] | GameMode: Open.mp                             |
+[2023-11-04T17:20:48+0600] [Info] | Developer: Nafiz & Sibbir                     |
+[2023-11-04T17:20:48+0600] [Info] -------------------------------------------------
+[2023-11-04T17:20:48+0600] [Info] Legacy Network started on port 7777
+[2023-11-04T17:20:53+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-04T17:21:44+0600] [Info] [connection] incoming connection: 127.0.0.1:57958 id: 0
+[2023-11-04T17:21:44+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:22:18+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-04T17:27:03+0600] [Info] [connection] incoming connection: 127.0.0.1:63991 id: 0
+[2023-11-04T17:27:03+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:27:54+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-04T17:31:18+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T17:31:19+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T17:31:19+0600] [Info]  
+[2023-11-04T17:31:19+0600] [Info]  ====================
+[2023-11-04T17:31:19+0600] [Info]  
+[2023-11-04T17:31:19+0600] [Info]   Whirlpool unloaded
+[2023-11-04T17:31:19+0600] [Info]  
+[2023-11-04T17:31:19+0600] [Info]  ====================
+[2023-11-04T17:31:19+0600] [Info]  
+[2023-11-04T17:31:19+0600] [Info] plugin.mysql: Unloading plugin...
+Starting open.mp server (1.0.1.2409) from commit dcd0190a91e67c99217e8ed3254baeb86733a0e4
+Loading component Actors.dll
+	Successfully loaded component Actors (1.0.1.2409) with UID c81ca021eae2ad5c
+Loading component Checkpoints.dll
+	Successfully loaded component Checkpoints (1.0.1.2409) with UID 44a937350d611dde
+Loading component Classes.dll
+	Successfully loaded component Classes (1.0.1.2409) with UID 8cfb3183976da208
+Loading component Console.dll
+	Successfully loaded component Console (1.0.1.2409) with UID bfa24e49d0c95ee4
+Loading component CustomModels.dll
+	Successfully loaded component CustomModels (1.0.1.2409) with UID 15e3cb1e7c77ffff
+Loading component Databases.dll
+	Successfully loaded component Databases (1.0.1.2409) with UID 80092e7eb5821a96
+Loading component Dialogs.dll
+	Successfully loaded component Dialogs (1.0.1.2409) with UID 44a111350d611dde
+Loading component Fixes.dll
+	Successfully loaded component Fixes (1.0.1.2409) with UID b5c615eff0329ff7
+Loading component GangZones.dll
+	Successfully loaded component GangZones (1.0.1.2409) with UID b3351d11ee8d8056
+Loading component LegacyConfig.dll
+	Successfully loaded component LegacyConfig (1.0.1.2409) with UID 24ef6216838f9ffc
+Loading component LegacyNetwork.dll
+	Successfully loaded component RakNetLegacyNetwork (1.0.1.2409) with UID ea9799fd79cf8442
+Loading component Menus.dll
+	Successfully loaded component Menus (1.0.1.2409) with UID 621e219eb97ee0b2
+Loading component Objects.dll
+	Successfully loaded component Objects (1.0.1.2409) with UID 59f8415f72da6160
+Loading component Pawn.dll
+	Successfully loaded component Pawn (1.0.1.2409) with UID 78906cd9f19c36a6
+Loading component pawncmd.dll
+	Successfully loaded component Pawn.CMD (0.3.4.0) with UID a03b47c907a96c29
+Loading component pawnraknet.dll
+	Successfully loaded component Pawn.RakNet (0.1.6.0) with UID 4a8b15c16d23e42f
+Loading component Pickups.dll
+	Successfully loaded component Pickups (1.0.1.2409) with UID cf304faa363dd971
+Loading component sscanf.dll
+	Successfully loaded component sscanf (2.13.8.0) with UID a1e7c01e55caa1f2
+Loading component TextDraws.dll
+	Successfully loaded component TextDraws (1.0.1.2409) with UID 9b5dc2b1d15c992a
+Loading component TextLabels.dll
+	Successfully loaded component TextLabels (1.0.1.2409) with UID a0c57ea80a009742
+Loading component Timers.dll
+	Successfully loaded component Timers (1.0.1.2409) with UID 2ad8124c5ea257a3
+Loading component Unicode.dll
+	Successfully loaded component Unicode (1.0.1.2409) with UID 8ffb446f8353922b
+Loading component Variables.dll
+	Successfully loaded component Variables (1.0.1.2409) with UID 75e121848bc01fa2
+Loading component Vehicles.dll
+	Successfully loaded component Vehicles (1.0.1.2409) with UID 3f1f62ee9e22ab19
+Loaded 24 component(s) from E:\.SunShine City\components
+[2023-11-04T17:31:38+0600] [Info] 
+[2023-11-04T17:31:38+0600] [Info]  ===============================
+[2023-11-04T17:31:38+0600] [Info] 
+[2023-11-04T17:31:38+0600] [Info]      sscanf component loaded.   
+[2023-11-04T17:31:38+0600] [Info] 
+[2023-11-04T17:31:38+0600] [Info]          Version: 2.13.8
+[2023-11-04T17:31:38+0600] [Info] 
+[2023-11-04T17:31:38+0600] [Info]    (c) 2022 Alex "Y_Less" Cole  
+[2023-11-04T17:31:38+0600] [Info] 
+[2023-11-04T17:31:38+0600] [Info]  ===============================
+[2023-11-04T17:31:38+0600] [Info] 
+[2023-11-04T17:31:38+0600] [Info] [Pawn.RakNet] plugin v1.6.0 loading...
+[2023-11-04T17:31:38+0600] [Info] [Pawn.RakNet] 
+
+    | Pawn.RakNet 1.6.0 | open.mp | 2016 - 2023
+    |--------------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 16:51:14
+    |--------------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.RakNet/tree/omp
+    |--------------------------------------------------------------
+    | Wiki: https://github.com/katursis/Pawn.RakNet/wiki
+
+[2023-11-04T17:31:38+0600] [Info] [Pawn.CMD] plugin v3.4.0 loading...
+[2023-11-04T17:31:38+0600] [Info] [Pawn.CMD] 
+
+    | Pawn.CMD 3.4.0 | open.mp | 2016 - 2023
+    |-----------------------------------------
+    | Author and maintainer: katursis
+
+
+    | Compiled: Feb 12 2023 at 17:25:09
+    |----------------------------------------------------------
+    | Repository: https://github.com/katursis/Pawn.CMD/tree/omp
+
+[2023-11-04T17:31:38+0600] [Info] Loading plugin: mysql
+[2023-11-04T17:31:39+0600] [Info]  >> plugin.mysql: R41-4 successfully loaded.
+[2023-11-04T17:31:39+0600] [Info] Loading plugin: Whirlpool
+[2023-11-04T17:31:39+0600] [Info]  
+[2023-11-04T17:31:39+0600] [Info]  ==================
+[2023-11-04T17:31:39+0600] [Info]  
+[2023-11-04T17:31:39+0600] [Info]   Whirlpool loaded
+[2023-11-04T17:31:39+0600] [Info]  
+[2023-11-04T17:31:39+0600] [Info]  ==================
+[2023-11-04T17:31:39+0600] [Info]  
+[2023-11-04T17:31:39+0600] [Info] AMX (68539280) loaded
+[2023-11-04T17:31:39+0600] [Info] [mysql]: Success connect to mysql database.
+[2023-11-04T17:31:39+0600] [Info] -------------------------------------------------
+[2023-11-04T17:31:39+0600] [Info] | GameMode: Open.mp                             |
+[2023-11-04T17:31:39+0600] [Info] | Developer: Nafiz & Sibbir                     |
+[2023-11-04T17:31:39+0600] [Info] -------------------------------------------------
+[2023-11-04T17:31:39+0600] [Info] Legacy Network started on port 7777
+[2023-11-04T17:31:45+0600] [Info] Failed to announce legacy network to open.mp list
+[2023-11-04T17:32:35+0600] [Info] [connection] incoming connection: 127.0.0.1:51980 id: 0
+[2023-11-04T17:32:35+0600] [Info] [join] Nafiz_Smith has joined the server (0:127.0.0.1)
+[2023-11-04T17:32:53+0600] [Info] [part] Nafiz_Smith has left the server (0:1)
+[2023-11-04T17:38:08+0600] [Info] [Pawn.RakNet] plugin unloaded
+[2023-11-04T17:38:08+0600] [Info] [Pawn.CMD] plugin unloaded
+[2023-11-04T17:38:08+0600] [Info]  
+[2023-11-04T17:38:08+0600] [Info]  ====================
+[2023-11-04T17:38:08+0600] [Info]  
+[2023-11-04T17:38:09+0600] [Info]   Whirlpool unloaded
+[2023-11-04T17:38:09+0600] [Info]  
+[2023-11-04T17:38:09+0600] [Info]  ====================
+[2023-11-04T17:38:09+0600] [Info]  
+[2023-11-04T17:38:09+0600] [Info] plugin.mysql: Unloading plugin...

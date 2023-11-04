@@ -43,7 +43,8 @@ enum PlayerData
     Float:pCameraY,
     Float:pCameraZ,
     pCash,
-    pBank
+    pBank,
+    pLoginTries
 };
 new gPlayerData[MAX_PLAYERS][PlayerData];
 
@@ -145,7 +146,7 @@ ShowLoginTD(playerid)
     TextDrawShowForPlayer(playerid, btn_register);
     TextDrawShowForPlayer(playerid, web_url);
     
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "");
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "Enter Your Pass");
     PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][2], 0.250, 1.500);
     PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][3], 0.270, 1.500);
     PlayerTextDrawShow(playerid, Login_PTD[playerid][0]);
@@ -180,6 +181,7 @@ HideLoginTD(playerid)
     PlayerTextDrawHide(playerid, Login_PTD[playerid][1]);
     PlayerTextDrawHide(playerid, Login_PTD[playerid][2]);
     PlayerTextDrawHide(playerid, Login_PTD[playerid][3]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][4]);
     CancelSelectTextDraw(playerid);
 }
  
@@ -230,10 +232,17 @@ public AfterRegister(playerid)
     HideRegisterTD(playerid);
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
-    SetPlayerSkin(playerid, 119);
+    SetPlayerSkin(playerid, 299);
     SetPlayerColor(playerid, 0xffffffff);
     SetPlayerPos(playerid, 0.0, 0.0, 5.0);
     SendClientMessage(playerid, -1, "Welcome to SunShine");
+    gPlayerData[playerid][pSkin] = 299;
+    gPlayerData[playerid][pHealth] = 100.0;
+    gPlayerData[playerid][pArmour] = 100.0;
+    SetPlayerArmour(playerid, 100.0);
+    gPlayerData[playerid][pCash] = 5000;
+    gPlayerData[playerid][pBank] = 5000;
+    GivePlayerMoney(playerid, 5000);
     return 1;
 } 
 public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
@@ -311,6 +320,26 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 return 1;
             }
         }
+        case DIALOG_PLAYER_LOGIN:
+        {
+            if(response)
+            {
+                new password[129];
+
+                if(isnull(inputtext))
+				{
+				    ShowDialogToPlayer(playerid, DIALOG_PLAYER_LOGIN);
+				    return 1;
+				}
+                WP_Hash(password, sizeof(password), inputtext);
+                gPlayerData[playerid][pTempPass] = password;
+                return 1;
+            }
+            else
+            {
+                return 1;
+            }
+        }
     }
     return 1;
 }
@@ -335,9 +364,14 @@ ShowDialogToPlayer(playerid, dialogid)
         {
             ShowPlayerDialog(playerid, DIALOG_PLAYER_EMAIL, DIALOG_STYLE_INPUT, "SunShine Register Panel", "Enter a name for your mali. Ex: nafiz1029\n(Note: Do not use @gamil.com just enter the name).", "Submit", "Cancel");
         }
+        case DIALOG_PLAYER_LOGIN:
+        {
+            ShowPlayerDialog(playerid, DIALOG_PLAYER_LOGIN, DIALOG_STYLE_INPUT, ""DIALOG_TITLE" Login Panel", "Enter your password.", "Submit", "Cancel");
+        }
     }
     return 1;
 }
+
 public OnPlayerClickTextDraw(playerid, Text:clickedid)
 {
     if(clickedid == box_pass)
@@ -345,6 +379,11 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
         if(ValidUser[playerid] == 0)  
         {
             ShowDialogToPlayer(playerid, DIALOG_PLAYER_REGISTER);
+        }
+        else
+        {
+            ShowDialogToPlayer(playerid, DIALOG_PLAYER_LOGIN);
+            return 1;
         }
         return 1;
     }
@@ -392,8 +431,16 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
             {
                 return SendClientMessage(playerid, -1, "Set your gender first.");
             }
-            mysql_format(database, QueryOutput, sizeof(QueryOutput), "INSERT INTO `users` (username, password, age, gender, email) VALUES(\"%s\", \"%s\", %i, %i, \"%s\")", ReturnPlayerName(playerid), gPlayerData[playerid][pTempPass], gPlayerData[playerid][pAge], gPlayerData[playerid][pGender], gPlayerData[playerid][pEmail]);
+            mysql_format(database, QueryOutput, sizeof(QueryOutput), "INSERT INTO `users` (username, password, age, gender, email, lastlogin) VALUES(\"%s\", \"%s\", %i, %i, \"%s\", NOW())", ReturnPlayerName(playerid), gPlayerData[playerid][pTempPass], gPlayerData[playerid][pAge], gPlayerData[playerid][pGender], gPlayerData[playerid][pEmail]);
             mysql_tquery(database, QueryOutput, "AfterRegister", "i", playerid);
+        }
+        else
+        {
+            new specifiers[] = "%D of %M, %Y @ %k:%i";
+            mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT *, DATE_FORMAT(lastlogin, \"%s\") FROM users WHERE username = \"%s\" AND password = \"%s\"", specifiers, ReturnPlayerName(playerid), gPlayerData[playerid][pTempPass]);
+            mysql_tquery(database, QueryOutput, "LoadUserAccount", "i", playerid);
+            
+            return 1;
         }
         return 1;
     }
@@ -464,6 +511,7 @@ SetPlayerToSpawn(playerid)
 {
     SetSpawnInfo(playerid, 0, gPlayerData[playerid][pSkin], gPlayerData[playerid][pPosX], gPlayerData[playerid][pPosY], gPlayerData[playerid][pPosZ], gPlayerData[playerid][pPosA]);
     SpawnPlayer(playerid);
+    SetPlayerHealth(playerid, gPlayerData[playerid][pHealth]);
 }
 
 SavePlayerData(playerid)
@@ -480,8 +528,27 @@ SavePlayerData(playerid)
     mysql_tquery(database, QueryOutput);
 }
 
-LoadUserAccount(playerid)
+forward LoadUserAccount(playerid);
+public LoadUserAccount(playerid)
 {
+    new result;
+    cache_get_row_count(result);
+    if(!result)
+    {
+        gPlayerData[playerid][pLoginTries]++;
+        if(gPlayerData[playerid][pLoginTries] < 5)
+        {
+            new string[128];
+            ShowDialogToPlayer(playerid, DIALOG_PLAYER_LOGIN);
+            format(string, sizeof(string), "Incorrect password. You have %i more attempts before you are kicked.", 5 - gPlayerData[playerid][pLoginTries]);
+            SendClientMessage(playerid, -1, string);
+        }
+        else
+        {
+            Kick(playerid);
+        }
+    }
+    
     cache_get_value_name_int(0, "id", gPlayerData[playerid][pID]);
     // Loading User Position
     cache_get_value_name_float(0, "pos_x", gPlayerData[playerid][pPosX]);
@@ -505,7 +572,10 @@ LoadUserAccount(playerid)
     SetPlayerHealth(playerid, gPlayerData[playerid][pHealth]);
     SetPlayerArmour(playerid, gPlayerData[playerid][pArmour]);
     GivePlayerMoney(playerid, gPlayerData[playerid][pCash]);
+    gPlayerData[playerid][pSkin] = 119;
     SetPlayerToSpawn(playerid);
+    HideLoginTD(playerid);
+    return 1;
 }
 
 GetPlayerLastLogin(playerid)

@@ -50,7 +50,7 @@ CREATE TABLE `users` (
   `armour` float DEFAULT 100.0,
   `cash` int(11) DEFAULT 5000,
   `bank` int(11) DEFAULT 5000,
-  `masteracc` int(11) NOT NULL DEFAULT 0;
+  `masteracc` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
