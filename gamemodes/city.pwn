@@ -1,9 +1,7 @@
 #include <open.mp>
 #include <a_mysql>
-#include <sscanf2>
-#include <PAWN.CMD>
-#include "../gamemodes/modules/server/textdraws.pwn"
 
+#define DISCORD
 #define SSCANF_NO_NICE_FEATURES
 
 // Server Information
@@ -14,6 +12,15 @@
 #define SERVER_THEME        "{EAFF00}"
 #define DIALOG_TITLE        "{EAFF00}Sunshine City {FFFFFF} RolePlay"
 
+
+#include <sscanf2>
+#include <PAWN.CMD>
+#if defined DISCORD
+	#include <discord-connector>
+	#define DCMD_PREFIX '-'
+	#include <discord-cmd>
+#endif
+#include "../gamemodes/modules/server/textdraws.pwn"
 main()
 {
     print("-------------------------------------------------");
@@ -24,11 +31,18 @@ main()
 
 native WP_Hash(buffer[], len, const str[]);
 #define strcpy(%0,%1)   strcat(((%0[0] = 0), %0), %1)
+new MySQL:database;
+new QueryOutput[1024];
 
 enum PlayerData
 {
     pID,
     pTempPass[129],
+    #if defined DISCORD
+        pDiscordID,
+    #endif
+    pVerified,
+    pVerifyCode,
     pEmail[64],
     pGender,
     pAge,
@@ -64,6 +78,27 @@ static ReturnPlayerName(playerid)
     new string[MAX_PLAYER_NAME];
     GetPlayerName(playerid, string, MAX_PLAYER_NAME);
     return string;
+}
+
+SetPlayerHealthEx(playerid, Float:Health)
+{
+    SetPlayerHealth(playerid, Health);
+    mysql_format(database, QueryOutput, sizeof(QueryOutput), "UPDATE users SET health = %f WHERE id = %i", Health, gPlayerData[playerid][pID]);
+    mysql_tquery(database, QueryOutput);
+}
+
+SetPlayerArmourEx(playerid, Float:Armour)
+{
+    SetPlayerHealth(playerid, Armour);
+    mysql_format(database, QueryOutput, sizeof(QueryOutput), "UPDATE users SET armour = %f WHERE id = %i", Armour, gPlayerData[playerid][pID]);
+    mysql_tquery(database, QueryOutput);
+}
+
+GivePlayerMoneyEx(playerid, Money)
+{
+    GivePlayerMoney(playerid, Money);
+    mysql_format(database, QueryOutput, sizeof(QueryOutput), "UPDATE users SET cash = %f WHERE id = %i", Money, gPlayerData[playerid][pID]);
+    mysql_tquery(database, QueryOutput);
 }
 
 ShowRegisterTD(playerid)
@@ -185,9 +220,6 @@ HideLoginTD(playerid)
     CancelSelectTextDraw(playerid);
 }
  
-new MySQL:database;
-new QueryOutput[1024];
- 
 public OnGameModeInit()
 {
     database = mysql_connect("127.0.0.1", "root", "", "samp");
@@ -202,6 +234,7 @@ public OnGameModeInit()
     }
 
     CreateLoginTDGlobal();
+    CreateMyAssetsTD();
     SendRconCommand("hostname "SERVER_NAME"");
     SetGameModeText(SERVER_MODE);
     return 1;
@@ -216,8 +249,32 @@ public OnGameModeExit()
 public OnPlayerConnect(playerid)
 {
     SendClientMessage(playerid, -1, "Connecting To SunShine City.........");
+
+    //Resetting Player Data
+    gPlayerData[playerid][pGender] = 0;
+    gPlayerData[playerid][pAge] = 0;
+    gPlayerData[playerid][pArmour] = 0;
+    gPlayerData[playerid][pCash] = 0;
+    gPlayerData[playerid][pBank] = 0;
+    gPlayerData[playerid][pLoginTries] = 0;
+    gPlayerData[playerid][pPosX] = 0.0;
+    gPlayerData[playerid][pPosY] = 0.0;
+    gPlayerData[playerid][pPosZ] = 0.0;
+    gPlayerData[playerid][pPosA] = 0.0;
+    gPlayerData[playerid][pCameraX] = 0.0;
+    gPlayerData[playerid][pCameraY] = 0.0;
+    gPlayerData[playerid][pCameraZ] = 0.0;
+    gPlayerData[playerid][pHealth] = 100.0;
+    gPlayerData[playerid][pArmour] = 0.0;
+
     CreateLoginTDPlayer(playerid);
+    CreateMyAssetsTDP(playerid);
     return 1;
+}
+
+public OnPlayerUpdate(playerid)
+{
+    GivePlayerMoney(playerid, gPlayerData[playerid][pCash]);
 }
  
 public OnPlayerDisconnect(playerid, reason)
@@ -509,6 +566,12 @@ ShowInterpolateCameraScenes(playerid)
 
 SetPlayerToSpawn(playerid)
 {
+    if(gPlayerData[playerid][pPosX] == 0.0 && gPlayerData[playerid][pPosY] == 0.0 && gPlayerData[playerid][pPosZ] == 0.0)
+    {
+        gPlayerData[playerid][pPosX] = 10.0;
+        gPlayerData[playerid][pPosY] = 10.0;
+        gPlayerData[playerid][pPosZ] = 10.0;
+    }
     SetSpawnInfo(playerid, 0, gPlayerData[playerid][pSkin], gPlayerData[playerid][pPosX], gPlayerData[playerid][pPosY], gPlayerData[playerid][pPosZ], gPlayerData[playerid][pPosA]);
     SpawnPlayer(playerid);
     SetPlayerHealth(playerid, gPlayerData[playerid][pHealth]);
@@ -542,14 +605,18 @@ public LoadUserAccount(playerid)
             ShowDialogToPlayer(playerid, DIALOG_PLAYER_LOGIN);
             format(string, sizeof(string), "Incorrect password. You have %i more attempts before you are kicked.", 5 - gPlayerData[playerid][pLoginTries]);
             SendClientMessage(playerid, -1, string);
+            return 1;
         }
         else
         {
             Kick(playerid);
         }
     }
-    
+    // Loading User Information
     cache_get_value_name_int(0, "id", gPlayerData[playerid][pID]);
+    cache_get_value_name_int(0, "verified", gPlayerData[playerid][pVerified]);
+    cache_get_value_name_int(0, "discord_id", gPlayerData[playerid][pDiscordID]);
+    cache_get_value_name_int(0, "verify_code", gPlayerData[playerid][pVerifyCode]);
     // Loading User Position
     cache_get_value_name_float(0, "pos_x", gPlayerData[playerid][pPosX]);
     cache_get_value_name_float(0, "pos_y", gPlayerData[playerid][pPosY]);
@@ -569,10 +636,9 @@ public LoadUserAccount(playerid)
     cache_get_value_name_int(0, "gender", gPlayerData[playerid][pGender]);
     cache_get_value_name(0, "email", gPlayerData[playerid][pEmail], 64);
 
-    SetPlayerHealth(playerid, gPlayerData[playerid][pHealth]);
-    SetPlayerArmour(playerid, gPlayerData[playerid][pArmour]);
-    GivePlayerMoney(playerid, gPlayerData[playerid][pCash]);
-    gPlayerData[playerid][pSkin] = 119;
+    SetPlayerHealthEx(playerid, gPlayerData[playerid][pHealth]);
+    SetPlayerArmourEx(playerid, gPlayerData[playerid][pArmour]);
+    GivePlayerMoneyEx(playerid, gPlayerData[playerid][pCash]);
     SetPlayerToSpawn(playerid);
     HideLoginTD(playerid);
     return 1;
@@ -667,6 +733,6 @@ public CheckValidUser(playerid)
 public OnPlayerRequestClass(playerid, classid)
 {
     ShowInterpolateCameraScenes(playerid);
-    mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT * FROM samp.users WHERE username = \"%s\"", ReturnPlayerName(playerid));
+    mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT id FROM users WHERE username = \"%s\"", ReturnPlayerName(playerid));
     mysql_tquery(database, QueryOutput, "CheckValidUser", "i", playerid);
 }

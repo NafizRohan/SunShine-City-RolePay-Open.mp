@@ -154,3 +154,52 @@
 [11/4/2023 5:31:39 PM] [WARNING] mysql_connect: no password specified
 [11/4/2023 5:32:35 PM] [ERROR] cache_get_value_name_int: field 'gender' not found
 [11/4/2023 5:38:25 PM] [WARNING] mysql_connect: no password specified
+[11/10/2023 4:20:23 PM] [WARNING] mysql_connect: no password specified
+[11/10/2023 8:32:21 PM] [WARNING] mysql_connect: no password specified
+[11/10/2023 8:33:39 PM] [ERROR] error #1054 while executing query "SELECT * FROM users WHERE master_name = "Nafiz_Smith"": Unknown column 'master_name' in 'where clause'
+[11/10/2023 8:37:44 PM] [WARNING] mysql_connect: no password specified
+[11/10/2023 8:38:46 PM] [ERROR] error #1054 while executing query "SELECT uid FROM users WHERE username = "Nafiz_Smith"": Unknown column 'uid' in 'field list'
+[11/10/2023 8:40:06 PM] [WARNING] mysql_connect: no password specified
+[11/10/2023 8:40:23 PM] [ERROR] cache_get_value_name_int: field 'gender' not found
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:43:25 PM] [ERROR] cache_get_value_name: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:45:22 PM] [WARNING] mysql_connect: no password specified
+[11/10/2023 8:46:02 PM] [ERROR] cache_get_value_name_int: field 'gender' not found
+[11/10/2023 8:46:05 PM] [ERROR] cache_get_value_name_int: field 'gender' not found
+[11/10/2023 8:46:06 PM] [ERROR] cache_get_value_name_int: field 'gender' not found
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_float: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name_int: invalid row index '0' (number of rows: '0')
+[11/10/2023 8:47:13 PM] [ERROR] cache_get_value_name: invalid row index '0' (number of rows: '0')

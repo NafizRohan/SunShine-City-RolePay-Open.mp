@@ -269,3 +269,219 @@ CreateLoginTDPlayer(playerid)
     PlayerTextDrawFont(playerid, Login_PTD[playerid][4], TEXT_DRAW_FONT_2);
     PlayerTextDrawSetProportional(playerid, Login_PTD[playerid][4], true);
 }
+
+// My Assets
+new Text: BG;
+new Text: Header;
+new Text: Title;
+new Text: House_View;
+new Text: House_TBG;
+new Text: House_Text;
+new Text: Vehicle_View;
+new Text: Vehicle_TBG;
+new Text: Vehicle_Text;
+new Text: Jewellery_View;
+new Text: Jewellery_TBG;
+new Text: Jewellery_Text;
+new Text: Close_BTN;
+new Text: Close_Text;
+new Text: Web_Url;
+
+new PlayerText: House_Count[MAX_PLAYERS];
+new PlayerText: Vehicle_Count[MAX_PLAYERS];
+
+CreateMyAssetsTD()
+{
+    BG = TextDrawCreate(149.000, 119.000, "LD_SPAC:white");
+    TextDrawTextSize(BG, 345.000, 228.000);
+    TextDrawAlignment(BG, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(BG, -2686721);
+    TextDrawSetShadow(BG, 0);
+    TextDrawSetOutline(BG, 0);
+    TextDrawBackgroundColour(BG, 255);
+    TextDrawFont(BG, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(BG, true);
+
+    Header = TextDrawCreate(149.000, 105.000, "LD_SPAC:white");
+    TextDrawTextSize(Header, 345.000, 28.000);
+    TextDrawAlignment(Header, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(Header, 255);
+    TextDrawSetShadow(Header, 0);
+    TextDrawSetOutline(Header, 0);
+    TextDrawBackgroundColour(Header, 255);
+    TextDrawFont(Header, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(Header, true);
+
+    Title = TextDrawCreate(289.000, 111.000, "My Assets");
+    TextDrawLetterSize(Title, 0.300, 1.500);
+    TextDrawAlignment(Title, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(Title, -1);
+    TextDrawSetShadow(Title, 1);
+    TextDrawSetOutline(Title, 1);
+    TextDrawBackgroundColour(Title, 150);
+    TextDrawFont(Title, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(Title, true);
+
+    House_View = TextDrawCreate(144.000, 132.000, "_");
+    TextDrawTextSize(House_View, 127.000, 124.000);
+    TextDrawAlignment(House_View, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(House_View, -1);
+    TextDrawSetShadow(House_View, 0);
+    TextDrawSetOutline(House_View, 0);
+    TextDrawBackgroundColour(House_View, 1536);
+    TextDrawFont(House_View, TEXT_DRAW_FONT_MODEL_PREVIEW);
+    TextDrawSetProportional(House_View, false);
+    TextDrawSetPreviewModel(House_View, 19522);
+    TextDrawSetPreviewRot(House_View, 0.000, 0.000, 38.000, 0.499);
+    TextDrawSetPreviewVehicleColours(House_View, 0, 0);
+
+    House_TBG = TextDrawCreate(155.000, 248.000, "LD_SPAC:white");
+    TextDrawTextSize(House_TBG, 98.000, 25.000);
+    TextDrawAlignment(House_TBG, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(House_TBG, 255);
+    TextDrawSetShadow(House_TBG, 0);
+    TextDrawSetOutline(House_TBG, 0);
+    TextDrawBackgroundColour(House_TBG, 255);
+    TextDrawFont(House_TBG, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(House_TBG, true);
+    TextDrawSetSelectable(House_TBG, true);
+
+    House_Text = TextDrawCreate(204.000, 250.000, "My Houses");
+    TextDrawLetterSize(House_Text, 0.300, 2.098);
+    TextDrawTextSize(House_Text, 32.000, 94.000);
+    TextDrawAlignment(House_Text, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(House_Text, -1);
+    TextDrawSetShadow(House_Text, 1);
+    TextDrawSetOutline(House_Text, 1);
+    TextDrawBackgroundColour(House_Text, 150);
+    TextDrawFont(House_Text, TEXT_DRAW_FONT_1);
+    TextDrawSetProportional(House_Text, true);
+
+    Vehicle_View = TextDrawCreate(256.000, 134.000, "_");
+    TextDrawTextSize(Vehicle_View, 127.000, 124.000);
+    TextDrawAlignment(Vehicle_View, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(Vehicle_View, -1);
+    TextDrawSetShadow(Vehicle_View, 0);
+    TextDrawSetOutline(Vehicle_View, 0);
+    TextDrawBackgroundColour(Vehicle_View, 1536);
+    TextDrawFont(Vehicle_View, TEXT_DRAW_FONT_MODEL_PREVIEW);
+    TextDrawSetProportional(Vehicle_View, false);
+    TextDrawSetPreviewModel(Vehicle_View, 19134);
+    TextDrawSetPreviewRot(Vehicle_View, -15.000, 0.000, 75.000, 0.898);
+    TextDrawSetPreviewVehicleColours(Vehicle_View, 0, 0);
+
+    Vehicle_TBG = TextDrawCreate(273.000, 248.000, "LD_SPAC:white");
+    TextDrawTextSize(Vehicle_TBG, 98.000, 25.000);
+    TextDrawAlignment(Vehicle_TBG, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(Vehicle_TBG, 255);
+    TextDrawSetShadow(Vehicle_TBG, 0);
+    TextDrawSetOutline(Vehicle_TBG, 0);
+    TextDrawBackgroundColour(Vehicle_TBG, 255);
+    TextDrawFont(Vehicle_TBG, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(Vehicle_TBG, true);
+    TextDrawSetSelectable(Vehicle_TBG, true);
+
+    Vehicle_Text = TextDrawCreate(323.000, 250.000, "My Vehicles");
+    TextDrawLetterSize(Vehicle_Text, 0.300, 2.098);
+    TextDrawTextSize(Vehicle_Text, 32.000, 94.000);
+    TextDrawAlignment(Vehicle_Text, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(Vehicle_Text, -1);
+    TextDrawSetShadow(Vehicle_Text, 1);
+    TextDrawSetOutline(Vehicle_Text, 1);
+    TextDrawBackgroundColour(Vehicle_Text, 150);
+    TextDrawFont(Vehicle_Text, TEXT_DRAW_FONT_1);
+    TextDrawSetProportional(Vehicle_Text, true);
+
+    Jewellery_View = TextDrawCreate(363.000, 132.000, "_");
+    TextDrawTextSize(Jewellery_View, 127.000, 124.000);
+    TextDrawAlignment(Jewellery_View, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(Jewellery_View, -1);
+    TextDrawSetShadow(Jewellery_View, 0);
+    TextDrawSetOutline(Jewellery_View, 0);
+    TextDrawBackgroundColour(Jewellery_View, 1536);
+    TextDrawFont(Jewellery_View, TEXT_DRAW_FONT_MODEL_PREVIEW);
+    TextDrawSetProportional(Jewellery_View, false);
+    TextDrawSetPreviewModel(Jewellery_View, 2710);
+    TextDrawSetPreviewRot(Jewellery_View, -19.000, 0.000, 214.000, 0.898);
+    TextDrawSetPreviewVehicleColours(Jewellery_View, 0, 0);
+
+    Jewellery_TBG = TextDrawCreate(390.000, 248.000, "LD_SPAC:white");
+    TextDrawTextSize(Jewellery_TBG, 98.000, 25.000);
+    TextDrawAlignment(Jewellery_TBG, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(Jewellery_TBG, 255);
+    TextDrawSetShadow(Jewellery_TBG, 0);
+    TextDrawSetOutline(Jewellery_TBG, 0);
+    TextDrawBackgroundColour(Jewellery_TBG, 255);
+    TextDrawFont(Jewellery_TBG, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(Jewellery_TBG, true);
+    TextDrawSetSelectable(Jewellery_TBG, true);
+
+    Jewellery_Text = TextDrawCreate(441.000, 250.000, "My Jewelleries");
+    TextDrawLetterSize(Jewellery_Text, 0.300, 2.098);
+    TextDrawTextSize(Jewellery_Text, 32.000, 94.000);
+    TextDrawAlignment(Jewellery_Text, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(Jewellery_Text, -1);
+    TextDrawSetShadow(Jewellery_Text, 1);
+    TextDrawSetOutline(Jewellery_Text, 1);
+    TextDrawBackgroundColour(Jewellery_Text, 150);
+    TextDrawFont(Jewellery_Text, TEXT_DRAW_FONT_1);
+    TextDrawSetProportional(Jewellery_Text, true);
+
+    Close_BTN = TextDrawCreate(273.000, 303.000, "LD_SPAC:white");
+    TextDrawTextSize(Close_BTN, 98.000, 25.000);
+    TextDrawAlignment(Close_BTN, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(Close_BTN, 255);
+    TextDrawSetShadow(Close_BTN, 0);
+    TextDrawSetOutline(Close_BTN, 0);
+    TextDrawBackgroundColour(Close_BTN, 255);
+    TextDrawFont(Close_BTN, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(Close_BTN, true);
+    TextDrawSetSelectable(Close_BTN, true);
+
+    Close_Text = TextDrawCreate(321.000, 305.000, "Close");
+    TextDrawLetterSize(Close_Text, 0.300, 2.098);
+    TextDrawTextSize(Close_Text, 32.000, 94.000);
+    TextDrawAlignment(Close_Text, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(Close_Text, -1);
+    TextDrawSetShadow(Close_Text, 1);
+    TextDrawSetOutline(Close_Text, 1);
+    TextDrawBackgroundColour(Close_Text, 150);
+    TextDrawFont(Close_Text, TEXT_DRAW_FONT_1);
+    TextDrawSetProportional(Close_Text, true);
+
+    Web_Url = TextDrawCreate(491.000, 328.000, "SunShine-City.co");
+    TextDrawLetterSize(Web_Url, 0.300, 1.500);
+    TextDrawAlignment(Web_Url, TEXT_DRAW_ALIGN_RIGHT);
+    TextDrawColour(Web_Url, -1);
+    TextDrawSetShadow(Web_Url, 1);
+    TextDrawSetOutline(Web_Url, 1);
+    TextDrawBackgroundColour(Web_Url, 150);
+    TextDrawFont(Web_Url, TEXT_DRAW_FONT_1);
+    TextDrawSetProportional(Web_Url, true);
+}
+
+CreateMyAssetsTDP(playerid)
+{
+    House_Count[playerid] = CreatePlayerTextDraw(playerid, 215.000, 181.000, "69");
+    PlayerTextDrawLetterSize(playerid, House_Count[playerid], 0.538, 4.999);
+    PlayerTextDrawTextSize(playerid, House_Count[playerid], 2.000, -3.000);
+    PlayerTextDrawAlignment(playerid, House_Count[playerid], TEXT_DRAW_ALIGN_CENTER);
+    PlayerTextDrawColour(playerid, House_Count[playerid], -1);
+    PlayerTextDrawSetShadow(playerid, House_Count[playerid], 1);
+    PlayerTextDrawSetOutline(playerid, House_Count[playerid], 1);
+    PlayerTextDrawBackgroundColour(playerid, House_Count[playerid], 150);
+    PlayerTextDrawFont(playerid, House_Count[playerid], TEXT_DRAW_FONT_2);
+    PlayerTextDrawSetProportional(playerid, House_Count[playerid], true);
+
+    Vehicle_Count[playerid] = CreatePlayerTextDraw(playerid, 319.000, 175.000, "69");
+    PlayerTextDrawLetterSize(playerid, Vehicle_Count[playerid], 0.538, 4.999);
+    PlayerTextDrawTextSize(playerid, Vehicle_Count[playerid], 2.000, -3.000);
+    PlayerTextDrawAlignment(playerid, Vehicle_Count[playerid], TEXT_DRAW_ALIGN_CENTER);
+    PlayerTextDrawColour(playerid, Vehicle_Count[playerid], -1);
+    PlayerTextDrawSetShadow(playerid, Vehicle_Count[playerid], 1);
+    PlayerTextDrawSetOutline(playerid, Vehicle_Count[playerid], 1);
+    PlayerTextDrawBackgroundColour(playerid, Vehicle_Count[playerid], 150);
+    PlayerTextDrawFont(playerid, Vehicle_Count[playerid], TEXT_DRAW_FONT_2);
+    PlayerTextDrawSetProportional(playerid, Vehicle_Count[playerid], true);
+
+}

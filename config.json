@@ -87,7 +87,11 @@
         "enable": true,
         "password": "donotchangeme"
     },
+    "discord": {
+        "bot_token": "MTE3MjQ3OTI0MDk2NTQ2ODIyMg.Gab_vy.g5AoB5xxHurRynONLxixsayU-iiowaG3mIjx6o"
+    },
     "sleep": 5.0,
     "use_dyn_ticks": true,
     "website": "open.mp"
+    
 }
