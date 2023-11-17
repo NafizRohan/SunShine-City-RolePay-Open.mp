@@ -485,3 +485,689 @@ CreateMyAssetsTDP(playerid)
     PlayerTextDrawSetProportional(playerid, Vehicle_Count[playerid], true);
 
 }
+
+
+// DealerShip TextDraw
+
+new Text: DL_BACK[3];
+new Text: DL_HEADER;
+new Text: DL_BORDER[8];
+new Text: DL_CLOSE;
+new Text: DL_CLOSE_NAME;
+new Text: DL_INFO;
+new Text: DL_PREVIEW;
+new Text: DL_COLOR_1;
+new Text: DL_COLOR_2;
+new Text: DL_CL2_1;
+new Text: DL_CL2_2;
+new Text: DL_CL2_3;
+new Text: DL_CL2_4;
+new Text: DL_CL2_5;
+new Text: DL_CL2_6;
+new Text: DL_CL1_1;
+new Text: DL_CL1_2;
+new Text: DL_CL1_3;
+new Text: DL_CL1_4;
+new Text: DL_CL1_5;
+new Text: DL_CL1_6;
+new Text: DL_CL1_7;
+new Text: DL_CL1_8;
+new Text: DL_CL1_9;
+new Text: DL_CL1_10;
+new Text: DL_CL1_11;
+new Text: DL_CL1_12;
+new Text: DL_CL2_7;
+new Text: DL_CL2_8;
+new Text: DL_CL2_9;
+new Text: DL_CL2_10;
+new Text: DL_CL2_11;
+new Text: DL_CL2_12;
+new Text: DL_PRICE;
+new Text: DL_PRICE_B;
+new Text: DL_NAME;
+new Text: DL_NAME_B;
+new Text: DL_SPEED;
+new Text: SL_SPEED_B;
+new Text: DL_SEATS;
+new Text: DL_SEATS_B;
+new Text: DL_BUY_BTN;
+new Text: DL_BUY_T;
+new Text: DL_WEB_URL;
+
+CreateDealerShipTD()
+{
+    DL_BACK[0] = TextDrawCreate(144.000, 124.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BACK[0], 90.000, 229.000);
+    TextDrawAlignment(DL_BACK[0], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BACK[0], 1182971135);
+    TextDrawSetShadow(DL_BACK[0], 0);
+    TextDrawSetOutline(DL_BACK[0], 0);
+    TextDrawBackgroundColour(DL_BACK[0], 255);
+    TextDrawFont(DL_BACK[0], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BACK[0], true);
+
+    DL_BACK[1] = TextDrawCreate(236.000, 124.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BACK[1], 250.000, 158.000);
+    TextDrawAlignment(DL_BACK[1], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BACK[1], 1687547391);
+    TextDrawSetShadow(DL_BACK[1], 0);
+    TextDrawSetOutline(DL_BACK[1], 0);
+    TextDrawBackgroundColour(DL_BACK[1], 255);
+    TextDrawFont(DL_BACK[1], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BACK[1], true);
+
+    DL_BACK[2] = TextDrawCreate(236.000, 285.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BACK[2], 250.000, 67.000);
+    TextDrawAlignment(DL_BACK[2], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BACK[2], 1769912572);
+    TextDrawSetShadow(DL_BACK[2], 0);
+    TextDrawSetOutline(DL_BACK[2], 0);
+    TextDrawBackgroundColour(DL_BACK[2], 255);
+    TextDrawFont(DL_BACK[2], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BACK[2], true);
+
+    DL_HEADER = TextDrawCreate(143.000, 98.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_HEADER, 346.000, 26.000);
+    TextDrawAlignment(DL_HEADER, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_HEADER, 255);
+    TextDrawSetShadow(DL_HEADER, 0);
+    TextDrawSetOutline(DL_HEADER, 0);
+    TextDrawBackgroundColour(DL_HEADER, 255);
+    TextDrawFont(DL_HEADER, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_HEADER, true);
+
+    DL_BORDER[0] = TextDrawCreate(143.000, 124.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BORDER[0], 3.000, 233.000);
+    TextDrawAlignment(DL_BORDER[0], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BORDER[0], 255);
+    TextDrawSetShadow(DL_BORDER[0], 0);
+    TextDrawSetOutline(DL_BORDER[0], 0);
+    TextDrawBackgroundColour(DL_BORDER[0], 255);
+    TextDrawFont(DL_BORDER[0], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BORDER[0], true);
+
+    DL_BORDER[1] = TextDrawCreate(233.000, 124.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BORDER[1], 3.000, 233.000);
+    TextDrawAlignment(DL_BORDER[1], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BORDER[1], 255);
+    TextDrawSetShadow(DL_BORDER[1], 0);
+    TextDrawSetOutline(DL_BORDER[1], 0);
+    TextDrawBackgroundColour(DL_BORDER[1], 255);
+    TextDrawFont(DL_BORDER[1], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BORDER[1], true);
+
+    DL_BORDER[2] = TextDrawCreate(145.000, 352.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BORDER[2], 343.000, 5.000);
+    TextDrawAlignment(DL_BORDER[2], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BORDER[2], 255);
+    TextDrawSetShadow(DL_BORDER[2], 0);
+    TextDrawSetOutline(DL_BORDER[2], 0);
+    TextDrawBackgroundColour(DL_BORDER[2], 255);
+    TextDrawFont(DL_BORDER[2], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BORDER[2], true);
+
+    DL_BORDER[3] = TextDrawCreate(145.000, 140.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BORDER[3], 343.000, 3.000);
+    TextDrawAlignment(DL_BORDER[3], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BORDER[3], 255);
+    TextDrawSetShadow(DL_BORDER[3], 0);
+    TextDrawSetOutline(DL_BORDER[3], 0);
+    TextDrawBackgroundColour(DL_BORDER[3], 255);
+    TextDrawFont(DL_BORDER[3], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BORDER[3], true);
+
+    DL_BORDER[4] = TextDrawCreate(486.000, 124.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BORDER[4], 3.000, 233.000);
+    TextDrawAlignment(DL_BORDER[4], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BORDER[4], 255);
+    TextDrawSetShadow(DL_BORDER[4], 0);
+    TextDrawSetOutline(DL_BORDER[4], 0);
+    TextDrawBackgroundColour(DL_BORDER[4], 255);
+    TextDrawFont(DL_BORDER[4], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BORDER[4], true);
+
+    DL_BORDER[5] = TextDrawCreate(233.000, 282.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BORDER[5], 256.000, 3.000);
+    TextDrawAlignment(DL_BORDER[5], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BORDER[5], 255);
+    TextDrawSetShadow(DL_BORDER[5], 0);
+    TextDrawSetOutline(DL_BORDER[5], 0);
+    TextDrawBackgroundColour(DL_BORDER[5], 255);
+    TextDrawFont(DL_BORDER[5], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BORDER[5], true);
+
+    DL_BORDER[6] = TextDrawCreate(233.000, 302.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BORDER[6], 256.000, 3.000);
+    TextDrawAlignment(DL_BORDER[6], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BORDER[6], 255);
+    TextDrawSetShadow(DL_BORDER[6], 0);
+    TextDrawSetOutline(DL_BORDER[6], 0);
+    TextDrawBackgroundColour(DL_BORDER[6], 255);
+    TextDrawFont(DL_BORDER[6], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BORDER[6], true);
+
+    DL_BORDER[7] = TextDrawCreate(361.000, 284.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BORDER[7], 3.000, 73.000);
+    TextDrawAlignment(DL_BORDER[7], TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BORDER[7], 255);
+    TextDrawSetShadow(DL_BORDER[7], 0);
+    TextDrawSetOutline(DL_BORDER[7], 0);
+    TextDrawBackgroundColour(DL_BORDER[7], 255);
+    TextDrawFont(DL_BORDER[7], TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BORDER[7], true);
+
+    DL_CLOSE = TextDrawCreate(465.000, 99.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CLOSE, 20.000, 23.000);
+    TextDrawAlignment(DL_CLOSE, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CLOSE, -16776961);
+    TextDrawSetShadow(DL_CLOSE, 0);
+    TextDrawSetOutline(DL_CLOSE, 0);
+    TextDrawBackgroundColour(DL_CLOSE, 255);
+    TextDrawFont(DL_CLOSE, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CLOSE, true);
+    TextDrawSetSelectable(DL_CLOSE, true);
+
+    DL_CLOSE_NAME = TextDrawCreate(472.000, 103.000, "X");
+    TextDrawLetterSize(DL_CLOSE_NAME, 0.259, 1.399);
+    TextDrawAlignment(DL_CLOSE_NAME, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CLOSE_NAME, -1);
+    TextDrawSetShadow(DL_CLOSE_NAME, 0);
+    TextDrawSetOutline(DL_CLOSE_NAME, 0);
+    TextDrawBackgroundColour(DL_CLOSE_NAME, 150);
+    TextDrawFont(DL_CLOSE_NAME, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_CLOSE_NAME, true);
+
+    DL_INFO = TextDrawCreate(189.000, 124.000, "Information");
+    TextDrawLetterSize(DL_INFO, 0.300, 1.500);
+    TextDrawTextSize(DL_INFO, 0.000, 84.000);
+    TextDrawAlignment(DL_INFO, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(DL_INFO, -1);
+    TextDrawSetShadow(DL_INFO, 1);
+    TextDrawSetOutline(DL_INFO, 1);
+    TextDrawBackgroundColour(DL_INFO, 150);
+    TextDrawFont(DL_INFO, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_INFO, true);
+
+    DL_PREVIEW = TextDrawCreate(361.000, 125.000, "PREVIEW");
+    TextDrawLetterSize(DL_PREVIEW, 0.300, 1.500);
+    TextDrawTextSize(DL_PREVIEW, 0.000, 84.000);
+    TextDrawAlignment(DL_PREVIEW, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(DL_PREVIEW, -1);
+    TextDrawSetShadow(DL_PREVIEW, 1);
+    TextDrawSetOutline(DL_PREVIEW, 1);
+    TextDrawBackgroundColour(DL_PREVIEW, 150);
+    TextDrawFont(DL_PREVIEW, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_PREVIEW, true);
+
+    DL_COLOR_1 = TextDrawCreate(296.000, 285.000, "COLOR_1");
+    TextDrawLetterSize(DL_COLOR_1, 0.300, 1.500);
+    TextDrawTextSize(DL_COLOR_1, 0.000, 84.000);
+    TextDrawAlignment(DL_COLOR_1, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(DL_COLOR_1, -1);
+    TextDrawSetShadow(DL_COLOR_1, 1);
+    TextDrawSetOutline(DL_COLOR_1, 1);
+    TextDrawBackgroundColour(DL_COLOR_1, 150);
+    TextDrawFont(DL_COLOR_1, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_COLOR_1, true);
+
+    DL_COLOR_2 = TextDrawCreate(423.000, 285.000, "COLOR_2");
+    TextDrawLetterSize(DL_COLOR_2, 0.300, 1.500);
+    TextDrawTextSize(DL_COLOR_2, 0.000, 84.000);
+    TextDrawAlignment(DL_COLOR_2, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(DL_COLOR_2, -1);
+    TextDrawSetShadow(DL_COLOR_2, 1);
+    TextDrawSetOutline(DL_COLOR_2, 1);
+    TextDrawBackgroundColour(DL_COLOR_2, 150);
+    TextDrawFont(DL_COLOR_2, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_COLOR_2, true);
+
+    DL_CL2_1 = TextDrawCreate(364.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_1, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_1, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_1, -2080108289);
+    TextDrawSetShadow(DL_CL2_1, 0);
+    TextDrawSetOutline(DL_CL2_1, 0);
+    TextDrawBackgroundColour(DL_CL2_1, 255);
+    TextDrawFont(DL_CL2_1, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_1, true);
+    TextDrawSetSelectable(DL_CL2_1, true);
+
+    DL_CL2_2 = TextDrawCreate(384.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_2, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_2, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_2, -678555393);
+    TextDrawSetShadow(DL_CL2_2, 0);
+    TextDrawSetOutline(DL_CL2_2, 0);
+    TextDrawBackgroundColour(DL_CL2_2, 255);
+    TextDrawFont(DL_CL2_2, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_2, true);
+    TextDrawSetSelectable(DL_CL2_2, true);
+
+    DL_CL2_3 = TextDrawCreate(404.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_3, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_3, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_3, 255);
+    TextDrawSetShadow(DL_CL2_3, 0);
+    TextDrawSetOutline(DL_CL2_3, 0);
+    TextDrawBackgroundColour(DL_CL2_3, 255);
+    TextDrawFont(DL_CL2_3, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_3, true);
+    TextDrawSetSelectable(DL_CL2_3, true);
+
+    DL_CL2_4 = TextDrawCreate(424.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_4, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_4, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_4, -168430081);
+    TextDrawSetShadow(DL_CL2_4, 0);
+    TextDrawSetOutline(DL_CL2_4, 0);
+    TextDrawBackgroundColour(DL_CL2_4, 255);
+    TextDrawFont(DL_CL2_4, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_4, true);
+    TextDrawSetSelectable(DL_CL2_4, true);
+
+    DL_CL2_5 = TextDrawCreate(444.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_5, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_5, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_5, 393549823);
+    TextDrawSetShadow(DL_CL2_5, 0);
+    TextDrawSetOutline(DL_CL2_5, 0);
+    TextDrawBackgroundColour(DL_CL2_5, 255);
+    TextDrawFont(DL_CL2_5, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_5, true);
+    TextDrawSetSelectable(DL_CL2_5, true);
+
+    DL_CL2_6 = TextDrawCreate(465.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_6, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_6, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_6, 747219711);
+    TextDrawSetShadow(DL_CL2_6, 0);
+    TextDrawSetOutline(DL_CL2_6, 0);
+    TextDrawBackgroundColour(DL_CL2_6, 255);
+    TextDrawFont(DL_CL2_6, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_6, true);
+    TextDrawSetSelectable(DL_CL2_6, true);
+
+    DL_CL1_1 = TextDrawCreate(236.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_1, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_1, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_1, -2080108289);
+    TextDrawSetShadow(DL_CL1_1, 0);
+    TextDrawSetOutline(DL_CL1_1, 0);
+    TextDrawBackgroundColour(DL_CL1_1, 255);
+    TextDrawFont(DL_CL1_1, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_1, true);
+    TextDrawSetSelectable(DL_CL1_1, true);
+
+    DL_CL1_2 = TextDrawCreate(256.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_2, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_2, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_2, -678555393);
+    TextDrawSetShadow(DL_CL1_2, 0);
+    TextDrawSetOutline(DL_CL1_2, 0);
+    TextDrawBackgroundColour(DL_CL1_2, 255);
+    TextDrawFont(DL_CL1_2, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_2, true);
+    TextDrawSetSelectable(DL_CL1_2, true);
+
+    DL_CL1_3 = TextDrawCreate(276.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_3, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_3, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_3, 255);
+    TextDrawSetShadow(DL_CL1_3, 0);
+    TextDrawSetOutline(DL_CL1_3, 0);
+    TextDrawBackgroundColour(DL_CL1_3, 255);
+    TextDrawFont(DL_CL1_3, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_3, true);
+    TextDrawSetSelectable(DL_CL1_3, true);
+
+    DL_CL1_4 = TextDrawCreate(296.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_4, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_4, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_4, -168430081);
+    TextDrawSetShadow(DL_CL1_4, 0);
+    TextDrawSetOutline(DL_CL1_4, 0);
+    TextDrawBackgroundColour(DL_CL1_4, 255);
+    TextDrawFont(DL_CL1_4, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_4, true);
+    TextDrawSetSelectable(DL_CL1_4, true);
+
+    DL_CL1_5 = TextDrawCreate(316.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_5, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_5, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_5, 393549823);
+    TextDrawSetShadow(DL_CL1_5, 0);
+    TextDrawSetOutline(DL_CL1_5, 0);
+    TextDrawBackgroundColour(DL_CL1_5, 255);
+    TextDrawFont(DL_CL1_5, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_5, true);
+    TextDrawSetSelectable(DL_CL1_5, true);
+
+    DL_CL1_6 = TextDrawCreate(337.000, 305.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_6, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_6, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_6, 747219711);
+    TextDrawSetShadow(DL_CL1_6, 0);
+    TextDrawSetOutline(DL_CL1_6, 0);
+    TextDrawBackgroundColour(DL_CL1_6, 255);
+    TextDrawFont(DL_CL1_6, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_6, true);
+    TextDrawSetSelectable(DL_CL1_6, true);
+
+    DL_CL1_7 = TextDrawCreate(236.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_7, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_7, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_7, -1974616577);
+    TextDrawSetShadow(DL_CL1_7, 0);
+    TextDrawSetOutline(DL_CL1_7, 0);
+    TextDrawBackgroundColour(DL_CL1_7, 255);
+    TextDrawFont(DL_CL1_7, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_7, true);
+    TextDrawSetSelectable(DL_CL1_7, true);
+
+    DL_CL1_8 = TextDrawCreate(256.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_8, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_8, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_8, -1212696577);
+    TextDrawSetShadow(DL_CL1_8, 0);
+    TextDrawSetOutline(DL_CL1_8, 0);
+    TextDrawBackgroundColour(DL_CL1_8, 255);
+    TextDrawFont(DL_CL1_8, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_8, true);
+    TextDrawSetSelectable(DL_CL1_8, true);
+
+    DL_CL1_9 = TextDrawCreate(276.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_9, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_9, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_9, 1930304255);
+    TextDrawSetShadow(DL_CL1_9, 0);
+    TextDrawSetOutline(DL_CL1_9, 0);
+    TextDrawBackgroundColour(DL_CL1_9, 255);
+    TextDrawFont(DL_CL1_9, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_9, true);
+    TextDrawSetSelectable(DL_CL1_9, true);
+
+    DL_CL1_10 = TextDrawCreate(296.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_10, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_10, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_10, -328552705);
+    TextDrawSetShadow(DL_CL1_10, 0);
+    TextDrawSetOutline(DL_CL1_10, 0);
+    TextDrawBackgroundColour(DL_CL1_10, 255);
+    TextDrawFont(DL_CL1_10, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_10, true);
+    TextDrawSetSelectable(DL_CL1_10, true);
+
+    DL_CL1_11 = TextDrawCreate(316.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_11, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_11, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_11, 1532845823);
+    TextDrawSetShadow(DL_CL1_11, 0);
+    TextDrawSetOutline(DL_CL1_11, 0);
+    TextDrawBackgroundColour(DL_CL1_11, 255);
+    TextDrawFont(DL_CL1_11, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_11, true);
+    TextDrawSetSelectable(DL_CL1_11, true);
+
+    DL_CL1_12 = TextDrawCreate(337.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL1_12, 22.000, 24.000);
+    TextDrawAlignment(DL_CL1_12, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL1_12, -1718018305);
+    TextDrawSetShadow(DL_CL1_12, 0);
+    TextDrawSetOutline(DL_CL1_12, 0);
+    TextDrawBackgroundColour(DL_CL1_12, 255);
+    TextDrawFont(DL_CL1_12, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL1_12, true);
+    TextDrawSetSelectable(DL_CL1_12, true);
+
+    DL_CL2_7 = TextDrawCreate(364.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_7, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_7, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_7, -1974616577);
+    TextDrawSetShadow(DL_CL2_7, 0);
+    TextDrawSetOutline(DL_CL2_7, 0);
+    TextDrawBackgroundColour(DL_CL2_7, 255);
+    TextDrawFont(DL_CL2_7, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_7, true);
+    TextDrawSetSelectable(DL_CL2_7, true);
+
+    DL_CL2_8 = TextDrawCreate(384.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_8, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_8, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_8, -1212696577);
+    TextDrawSetShadow(DL_CL2_8, 0);
+    TextDrawSetOutline(DL_CL2_8, 0);
+    TextDrawBackgroundColour(DL_CL2_8, 255);
+    TextDrawFont(DL_CL2_8, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_8, true);
+    TextDrawSetSelectable(DL_CL2_8, true);
+
+    DL_CL2_9 = TextDrawCreate(404.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_9, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_9, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_9, 1930304255);
+    TextDrawSetShadow(DL_CL2_9, 0);
+    TextDrawSetOutline(DL_CL2_9, 0);
+    TextDrawBackgroundColour(DL_CL2_9, 255);
+    TextDrawFont(DL_CL2_9, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_9, true);
+    TextDrawSetSelectable(DL_CL2_9, true);
+
+    DL_CL2_10 = TextDrawCreate(424.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_10, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_10, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_10, -328552705);
+    TextDrawSetShadow(DL_CL2_10, 0);
+    TextDrawSetOutline(DL_CL2_10, 0);
+    TextDrawBackgroundColour(DL_CL2_10, 255);
+    TextDrawFont(DL_CL2_10, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_10, true);
+    TextDrawSetSelectable(DL_CL2_10, true);
+
+    DL_CL2_11 = TextDrawCreate(444.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_11, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_11, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_11, 1532845823);
+    TextDrawSetShadow(DL_CL2_11, 0);
+    TextDrawSetOutline(DL_CL2_11, 0);
+    TextDrawBackgroundColour(DL_CL2_11, 255);
+    TextDrawFont(DL_CL2_11, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_11, true);
+    TextDrawSetSelectable(DL_CL2_11, true);
+
+    DL_CL2_12 = TextDrawCreate(465.000, 327.000, "LD_BEAT:chit");
+    TextDrawTextSize(DL_CL2_12, 22.000, 24.000);
+    TextDrawAlignment(DL_CL2_12, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_CL2_12, -1718018305);
+    TextDrawSetShadow(DL_CL2_12, 0);
+    TextDrawSetOutline(DL_CL2_12, 0);
+    TextDrawBackgroundColour(DL_CL2_12, 255);
+    TextDrawFont(DL_CL2_12, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_CL2_12, true);
+    TextDrawSetSelectable(DL_CL2_12, true);
+
+    DL_PRICE = TextDrawCreate(170.000, 253.000, "PRICE:");
+    TextDrawLetterSize(DL_PRICE, 0.300, 1.500);
+    TextDrawAlignment(DL_PRICE, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_PRICE, -1);
+    TextDrawSetShadow(DL_PRICE, 1);
+    TextDrawSetOutline(DL_PRICE, 1);
+    TextDrawBackgroundColour(DL_PRICE, 150);
+    TextDrawFont(DL_PRICE, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_PRICE, true);
+
+    DL_PRICE_B = TextDrawCreate(148.000, 269.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_PRICE_B, 83.000, 19.000);
+    TextDrawAlignment(DL_PRICE_B, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_PRICE_B, 255);
+    TextDrawSetShadow(DL_PRICE_B, 0);
+    TextDrawSetOutline(DL_PRICE_B, 0);
+    TextDrawBackgroundColour(DL_PRICE_B, 255);
+    TextDrawFont(DL_PRICE_B, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_PRICE_B, true);
+
+    DL_NAME = TextDrawCreate(170.000, 142.000, "NAME:");
+    TextDrawLetterSize(DL_NAME, 0.300, 1.500);
+    TextDrawAlignment(DL_NAME, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_NAME, -1);
+    TextDrawSetShadow(DL_NAME, 1);
+    TextDrawSetOutline(DL_NAME, 1);
+    TextDrawBackgroundColour(DL_NAME, 150);
+    TextDrawFont(DL_NAME, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_NAME, true);
+
+    DL_NAME_B = TextDrawCreate(148.000, 158.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_NAME_B, 83.000, 19.000);
+    TextDrawAlignment(DL_NAME_B, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_NAME_B, 255);
+    TextDrawSetShadow(DL_NAME_B, 0);
+    TextDrawSetOutline(DL_NAME_B, 0);
+    TextDrawBackgroundColour(DL_NAME_B, 255);
+    TextDrawFont(DL_NAME_B, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_NAME_B, true);
+
+    DL_SPEED = TextDrawCreate(191.000, 179.000, "MAX_SPEED:");
+    TextDrawLetterSize(DL_SPEED, 0.300, 1.500);
+    TextDrawAlignment(DL_SPEED, TEXT_DRAW_ALIGN_CENTER);
+    TextDrawColour(DL_SPEED, -1);
+    TextDrawSetShadow(DL_SPEED, 1);
+    TextDrawSetOutline(DL_SPEED, 1);
+    TextDrawBackgroundColour(DL_SPEED, 150);
+    TextDrawFont(DL_SPEED, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_SPEED, true);
+
+    SL_SPEED_B = TextDrawCreate(148.000, 195.000, "LD_SPAC:white");
+    TextDrawTextSize(SL_SPEED_B, 83.000, 19.000);
+    TextDrawAlignment(SL_SPEED_B, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(SL_SPEED_B, 255);
+    TextDrawSetShadow(SL_SPEED_B, 0);
+    TextDrawSetOutline(SL_SPEED_B, 0);
+    TextDrawBackgroundColour(SL_SPEED_B, 255);
+    TextDrawFont(SL_SPEED_B, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(SL_SPEED_B, true);
+
+    DL_SEATS = TextDrawCreate(168.000, 216.000, "SEATS:");
+    TextDrawLetterSize(DL_SEATS, 0.300, 1.500);
+    TextDrawAlignment(DL_SEATS, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_SEATS, -1);
+    TextDrawSetShadow(DL_SEATS, 1);
+    TextDrawSetOutline(DL_SEATS, 1);
+    TextDrawBackgroundColour(DL_SEATS, 150);
+    TextDrawFont(DL_SEATS, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_SEATS, true);
+
+    DL_SEATS_B = TextDrawCreate(148.000, 232.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_SEATS_B, 83.000, 19.000);
+    TextDrawAlignment(DL_SEATS_B, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_SEATS_B, 255);
+    TextDrawSetShadow(DL_SEATS_B, 0);
+    TextDrawSetOutline(DL_SEATS_B, 0);
+    TextDrawBackgroundColour(DL_SEATS_B, 255);
+    TextDrawFont(DL_SEATS_B, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_SEATS_B, true);
+
+    DL_BUY_BTN = TextDrawCreate(148.000, 302.000, "LD_SPAC:white");
+    TextDrawTextSize(DL_BUY_BTN, 83.000, 36.000);
+    TextDrawAlignment(DL_BUY_BTN, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BUY_BTN, 255);
+    TextDrawSetShadow(DL_BUY_BTN, 0);
+    TextDrawSetOutline(DL_BUY_BTN, 0);
+    TextDrawBackgroundColour(DL_BUY_BTN, 255);
+    TextDrawFont(DL_BUY_BTN, TEXT_DRAW_FONT_SPRITE_DRAW);
+    TextDrawSetProportional(DL_BUY_BTN, true);
+    TextDrawSetSelectable(DL_BUY_BTN, true);
+
+    DL_BUY_T = TextDrawCreate(165.000, 299.000, "BUY");
+    TextDrawLetterSize(DL_BUY_T, 0.629, 3.999);
+    TextDrawAlignment(DL_BUY_T, TEXT_DRAW_ALIGN_LEFT);
+    TextDrawColour(DL_BUY_T, -65281);
+    TextDrawSetShadow(DL_BUY_T, 1);
+    TextDrawSetOutline(DL_BUY_T, 1);
+    TextDrawBackgroundColour(DL_BUY_T, 150);
+    TextDrawFont(DL_BUY_T, TEXT_DRAW_FONT_2);
+    TextDrawSetProportional(DL_BUY_T, true);
+
+    DL_WEB_URL = TextDrawCreate(232.000, 341.000, "SunShine.co");
+    TextDrawLetterSize(DL_WEB_URL, 0.280, 1.199);
+    TextDrawAlignment(DL_WEB_URL, TEXT_DRAW_ALIGN_RIGHT);
+    TextDrawColour(DL_WEB_URL, -65281);
+    TextDrawSetShadow(DL_WEB_URL, 1);
+    TextDrawSetOutline(DL_WEB_URL, 1);
+    TextDrawBackgroundColour(DL_WEB_URL, 150);
+    TextDrawFont(DL_WEB_URL, TEXT_DRAW_FONT_1);
+    TextDrawSetProportional(DL_WEB_URL, true);
+}
+
+
+new PlayerText: DL_VEH_PERVIEW[MAX_PLAYERS];
+new PlayerText: DEAL_NAME[MAX_PLAYERS];
+new PlayerText: DL_PRICE_T[MAX_PLAYERS];
+new PlayerText: DL_NAME_T[MAX_PLAYERS];
+new PlayerText: DL_SPEED_T[MAX_PLAYERS];
+new PlayerText: DL_SEATS_T[MAX_PLAYERS];
+
+CreatePlayerDealerShipTD(playerid)
+{
+
+    DL_VEH_PERVIEW[playerid] = CreatePlayerTextDraw(playerid, 236.000, 142.000, "_");
+    PlayerTextDrawTextSize(playerid, DL_VEH_PERVIEW[playerid], 250.000, 140.000);
+    PlayerTextDrawAlignment(playerid, DL_VEH_PERVIEW[playerid], TEXT_DRAW_ALIGN_LEFT);
+    PlayerTextDrawColour(playerid, DL_VEH_PERVIEW[playerid], -1);
+    PlayerTextDrawSetShadow(playerid, DL_VEH_PERVIEW[playerid], 0);
+    PlayerTextDrawSetOutline(playerid, DL_VEH_PERVIEW[playerid], 0);
+    PlayerTextDrawBackgroundColour(playerid, DL_VEH_PERVIEW[playerid], 85);
+    PlayerTextDrawFont(playerid, DL_VEH_PERVIEW[playerid], TEXT_DRAW_FONT_MODEL_PREVIEW);
+    PlayerTextDrawSetProportional(playerid, DL_VEH_PERVIEW[playerid], false);
+    PlayerTextDrawSetPreviewModel(playerid, DL_VEH_PERVIEW[playerid], 541);
+    PlayerTextDrawSetPreviewRot(playerid, DL_VEH_PERVIEW[playerid], -35.000, 0.000, -41.000, 1.000);
+    PlayerTextDrawSetPreviewVehicleColours(playerid, DL_VEH_PERVIEW[playerid], 0, 1);
+
+    DEAL_NAME[playerid] = CreatePlayerTextDraw(playerid, 149.000, 103.000, "OceanDock Dealership");
+    PlayerTextDrawLetterSize(playerid, DEAL_NAME[playerid], 0.300, 1.500);
+    PlayerTextDrawAlignment(playerid, DEAL_NAME[playerid], TEXT_DRAW_ALIGN_LEFT);
+    PlayerTextDrawColour(playerid, DEAL_NAME[playerid], -65281);
+    PlayerTextDrawSetShadow(playerid, DEAL_NAME[playerid], 1);
+    PlayerTextDrawSetOutline(playerid, DEAL_NAME[playerid], 1);
+    PlayerTextDrawBackgroundColour(playerid, DEAL_NAME[playerid], 150);
+    PlayerTextDrawFont(playerid, DEAL_NAME[playerid], TEXT_DRAW_FONT_1);
+    PlayerTextDrawSetProportional(playerid, DEAL_NAME[playerid], true);
+
+    DL_PRICE_T[playerid] = CreatePlayerTextDraw(playerid, 190.000, 271.000, "20000000$");
+    PlayerTextDrawLetterSize(playerid, DL_PRICE_T[playerid], 0.259, 1.500);
+    PlayerTextDrawAlignment(playerid, DL_PRICE_T[playerid], TEXT_DRAW_ALIGN_CENTER);
+    PlayerTextDrawColour(playerid, DL_PRICE_T[playerid], -65281);
+    PlayerTextDrawSetShadow(playerid, DL_PRICE_T[playerid], 1);
+    PlayerTextDrawSetOutline(playerid, DL_PRICE_T[playerid], 1);
+    PlayerTextDrawBackgroundColour(playerid, DL_PRICE_T[playerid], 150);
+    PlayerTextDrawFont(playerid, DL_PRICE_T[playerid], TEXT_DRAW_FONT_2);
+    PlayerTextDrawSetProportional(playerid, DL_PRICE_T[playerid], true);
+
+    DL_NAME_T[playerid] = CreatePlayerTextDraw(playerid, 190.000, 160.000, "Ambulance");
+    PlayerTextDrawLetterSize(playerid, DL_NAME_T[playerid], 0.259, 1.500);
+    PlayerTextDrawAlignment(playerid, DL_NAME_T[playerid], TEXT_DRAW_ALIGN_CENTER);
+    PlayerTextDrawColour(playerid, DL_NAME_T[playerid], -65281);
+    PlayerTextDrawSetShadow(playerid, DL_NAME_T[playerid], 1);
+    PlayerTextDrawSetOutline(playerid, DL_NAME_T[playerid], 1);
+    PlayerTextDrawBackgroundColour(playerid, DL_NAME_T[playerid], 150);
+    PlayerTextDrawFont(playerid, DL_NAME_T[playerid], TEXT_DRAW_FONT_2);
+    PlayerTextDrawSetProportional(playerid, DL_NAME_T[playerid], true);
+
+    DL_SPEED_T[playerid] = CreatePlayerTextDraw(playerid, 190.000, 197.000, "220 KM/H");
+    PlayerTextDrawLetterSize(playerid, DL_SPEED_T[playerid], 0.259, 1.500);
+    PlayerTextDrawAlignment(playerid, DL_SPEED_T[playerid], TEXT_DRAW_ALIGN_CENTER);
+    PlayerTextDrawColour(playerid, DL_SPEED_T[playerid], -65281);
+    PlayerTextDrawSetShadow(playerid, DL_SPEED_T[playerid], 1);
+    PlayerTextDrawSetOutline(playerid, DL_SPEED_T[playerid], 1);
+    PlayerTextDrawBackgroundColour(playerid, DL_SPEED_T[playerid], 150);
+    PlayerTextDrawFont(playerid, DL_SPEED_T[playerid], TEXT_DRAW_FONT_2);
+    PlayerTextDrawSetProportional(playerid, DL_SPEED_T[playerid], true);
+
+    DL_SEATS_T[playerid] = CreatePlayerTextDraw(playerid, 190.000, 234.000, "Four");
+    PlayerTextDrawLetterSize(playerid, DL_SEATS_T[playerid], 0.259, 1.500);
+    PlayerTextDrawAlignment(playerid, DL_SEATS_T[playerid], TEXT_DRAW_ALIGN_CENTER);
+    PlayerTextDrawColour(playerid, DL_SEATS_T[playerid], -65281);
+    PlayerTextDrawSetShadow(playerid, DL_SEATS_T[playerid], 1);
+    PlayerTextDrawSetOutline(playerid, DL_SEATS_T[playerid], 1);
+    PlayerTextDrawBackgroundColour(playerid, DL_SEATS_T[playerid], 150);
+    PlayerTextDrawFont(playerid, DL_SEATS_T[playerid], TEXT_DRAW_FONT_2);
+    PlayerTextDrawSetProportional(playerid, DL_SEATS_T[playerid], true);
+}

@@ -46,10 +46,19 @@ CREATE TABLE `users` (
   `verify_code` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Indexes for dumped tables
---
-
+CREATE TABLE `vehicles`(
+  `id` int(11) NOT NULL,
+  `model` int(3) DEFAULT 0,
+  `price` int(11) DEFAULT 0,
+  `owner_id` int(11) DEFAULT 0,
+  `health` float DEFAULT 1000.0,
+  `fuel` int(3) DEFAULT 100,
+  `panels` int(11) DEFAULT '0',
+  `doors` int(11) DEFAULT '0',
+  `lights` int(11) DEFAULT '0',
+  `tires` int(11) DEFAULT '0' ,
+  `group_id` int(11) DEFAULT -1
+)
 --
 -- Indexes for table `users`
 --

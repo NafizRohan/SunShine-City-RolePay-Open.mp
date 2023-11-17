@@ -235,6 +235,7 @@ public OnGameModeInit()
 
     CreateLoginTDGlobal();
     CreateMyAssetsTD();
+    CreateDealerShipTD();
     SendRconCommand("hostname "SERVER_NAME"");
     SetGameModeText(SERVER_MODE);
     return 1;
@@ -269,6 +270,7 @@ public OnPlayerConnect(playerid)
 
     CreateLoginTDPlayer(playerid);
     CreateMyAssetsTDP(playerid);
+    CreatePlayerDealerShipTD(playerid);
     return 1;
 }
 
@@ -683,7 +685,7 @@ GetPlayerEmail(playerid)
 GetPlayerGender(playerid)
 {
     new Cache:data, gender;
-    mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT email from users WHERE username = \"%s\"", ReturnPlayerName(playerid));
+    mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT gender from users WHERE username = \"%s\"", ReturnPlayerName(playerid));
     data = mysql_query(database, QueryOutput);
     if(cache_num_rows())
     {
@@ -730,9 +732,14 @@ public CheckValidUser(playerid)
     return 1;
 }
 
-public OnPlayerRequestClass(playerid, classid)
+
+ShowMainMenuCamera(playerid) 
 {
     ShowInterpolateCameraScenes(playerid);
     mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT id FROM users WHERE username = \"%s\"", ReturnPlayerName(playerid));
     mysql_tquery(database, QueryOutput, "CheckValidUser", "i", playerid);
+}
+public OnPlayerRequestClass(playerid, classid)
+{
+    ShowMainMenuCamera(playerid);
 }
