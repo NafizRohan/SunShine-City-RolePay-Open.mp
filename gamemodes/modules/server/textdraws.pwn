@@ -188,7 +188,7 @@ CreateLoginTDGlobal()
     TextDrawSetProportional(box_email, true);
     TextDrawSetSelectable(box_email, true);
 
-    btn_register = TextDrawCreate(388.000, 277.000, "Register");
+    btn_register = TextDrawCreate(388.000, 277.000, "Proceed...");
     TextDrawLetterSize(btn_register, 0.509, 3.299);
     TextDrawTextSize(btn_register, 18.000, 125.000);
     TextDrawAlignment(btn_register, TEXT_DRAW_ALIGN_CENTER);
@@ -1170,4 +1170,126 @@ CreatePlayerDealerShipTD(playerid)
     PlayerTextDrawBackgroundColour(playerid, DL_SEATS_T[playerid], 150);
     PlayerTextDrawFont(playerid, DL_SEATS_T[playerid], TEXT_DRAW_FONT_2);
     PlayerTextDrawSetProportional(playerid, DL_SEATS_T[playerid], true);
+}
+
+
+//Show/Hide Textdraws
+
+ShowRegisterTD(playerid)
+{
+    TextDrawShowForPlayer(playerid, Background);
+    TextDrawShowForPlayer(playerid, Login_GTD[0]);
+    TextDrawShowForPlayer(playerid, Login_GTD[1]);
+    TextDrawShowForPlayer(playerid, Login_GTD[2]);
+    TextDrawShowForPlayer(playerid, Login_GTD[3]);
+    TextDrawShowForPlayer(playerid, Login_GTD[4]);
+    TextDrawShowForPlayer(playerid, Login_GTD[5]);
+    TextDrawShowForPlayer(playerid, Login_GTD[6]);
+    TextDrawShowForPlayer(playerid, Login_GTD[7]);
+    TextDrawShowForPlayer(playerid, Login_GTD[8]);
+    TextDrawShowForPlayer(playerid, Skin);
+    TextDrawShowForPlayer(playerid, Name);
+    TextDrawShowForPlayer(playerid, box_pass);
+    TextDrawShowForPlayer(playerid, box_gender);
+    TextDrawShowForPlayer(playerid, box_age);
+    TextDrawShowForPlayer(playerid, box_email);
+    TextDrawShowForPlayer(playerid, btn_register);
+    TextDrawShowForPlayer(playerid, web_url);
+    
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "");
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][1], "");
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][2], "");
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][3], "");
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][0]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][1]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][2]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][3]);
+    SelectTextDraw(playerid, 0xFF1E05FF);
+}
+
+HideRegisterTD(playerid)
+{
+    TextDrawHideForPlayer(playerid, Login_GTD[0]);
+    TextDrawHideForPlayer(playerid, Login_GTD[1]);
+    TextDrawHideForPlayer(playerid, Login_GTD[2]);
+    TextDrawHideForPlayer(playerid, Login_GTD[3]);
+    TextDrawHideForPlayer(playerid, Login_GTD[4]);
+    TextDrawHideForPlayer(playerid, Login_GTD[5]);
+    TextDrawHideForPlayer(playerid, Login_GTD[6]);
+    TextDrawHideForPlayer(playerid, Login_GTD[7]);
+    TextDrawHideForPlayer(playerid, Login_GTD[8]);
+    TextDrawHideForPlayer(playerid, Background);
+    TextDrawHideForPlayer(playerid, Skin);
+    TextDrawHideForPlayer(playerid, Name);
+    TextDrawHideForPlayer(playerid, box_pass);
+    TextDrawHideForPlayer(playerid, box_gender);
+    TextDrawHideForPlayer(playerid, box_age);
+    TextDrawHideForPlayer(playerid, box_email);
+    TextDrawHideForPlayer(playerid, btn_register);
+    TextDrawHideForPlayer(playerid, web_url);
+
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][0]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][1]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][2]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][3]);
+    CancelSelectTextDraw(playerid);
+}
+
+ShowLoginTD(playerid)
+{
+    TextDrawShowForPlayer(playerid, Background);
+    TextDrawShowForPlayer(playerid, Login_GTD[0]);
+    TextDrawShowForPlayer(playerid, Login_GTD[1]);
+    TextDrawShowForPlayer(playerid, Login_GTD[2]);
+    TextDrawShowForPlayer(playerid, Login_GTD[3]);
+    TextDrawShowForPlayer(playerid, Login_GTD[4]);
+    TextDrawShowForPlayer(playerid, Login_GTD[5]);
+    TextDrawShowForPlayer(playerid, Login_GTD[7]);
+    TextDrawShowForPlayer(playerid, Login_GTD[8]);
+    TextDrawShowForPlayer(playerid, Skin);
+    TextDrawShowForPlayer(playerid, Name);
+    TextDrawShowForPlayer(playerid, box_pass);
+    TextDrawShowForPlayer(playerid, box_gender);
+    TextDrawShowForPlayer(playerid, box_age);
+    TextDrawShowForPlayer(playerid, box_email);
+    TextDrawShowForPlayer(playerid, btn_register);
+    TextDrawShowForPlayer(playerid, web_url);
+    
+    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "Enter Your Pass");
+    PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][2], 0.250, 1.500);
+    PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][3], 0.270, 1.500);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][0]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][1]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][2]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][3]);
+    PlayerTextDrawShow(playerid, Login_PTD[playerid][4]);
+    SelectTextDraw(playerid, 0xFF1E05FF);
+}
+
+HideLoginTD(playerid)
+{
+    TextDrawHideForPlayer(playerid, Login_GTD[0]);
+    TextDrawHideForPlayer(playerid, Login_GTD[1]);
+    TextDrawHideForPlayer(playerid, Login_GTD[2]);
+    TextDrawHideForPlayer(playerid, Login_GTD[3]);
+    TextDrawHideForPlayer(playerid, Login_GTD[4]);
+    TextDrawHideForPlayer(playerid, Login_GTD[5]);
+    TextDrawHideForPlayer(playerid, Login_GTD[7]);
+    TextDrawHideForPlayer(playerid, Login_GTD[8]);
+    TextDrawHideForPlayer(playerid, Background);
+    TextDrawHideForPlayer(playerid, Skin);
+    TextDrawHideForPlayer(playerid, Name);
+    TextDrawHideForPlayer(playerid, box_pass);
+    TextDrawHideForPlayer(playerid, box_gender);
+    TextDrawHideForPlayer(playerid, box_age);
+    TextDrawHideForPlayer(playerid, box_email);
+    TextDrawHideForPlayer(playerid, btn_register);
+    TextDrawHideForPlayer(playerid, web_url);
+
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][0]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][1]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][2]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][3]);
+    PlayerTextDrawHide(playerid, Login_PTD[playerid][4]);
+    CancelSelectTextDraw(playerid);
 }

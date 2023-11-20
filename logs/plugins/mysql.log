@@ -207,3 +207,34 @@
 [11/17/2023 7:12:36 PM] [ERROR] cache_get_value_name_int: field 'gender' not found
 [11/17/2023 7:12:39 PM] [ERROR] cache_get_value_name_int: field 'gender' not found
 [11/17/2023 7:12:56 PM] [ERROR] cache_get_value_name_int: field 'gender' not found
+[11/18/2023 5:54:01 PM] [WARNING] mysql_connect: no password specified
+[11/18/2023 5:56:03 PM] [ERROR] cache_get_value_name_int: field 'verified' not found
+[11/18/2023 5:56:03 PM] [ERROR] cache_get_value_name_int: field 'discord_id' not found
+[11/18/2023 5:56:03 PM] [ERROR] cache_get_value_name_int: field 'verify_code' not found
+[11/18/2023 5:56:06 PM] [ERROR] cache_get_value_name_int: field 'verified' not found
+[11/18/2023 5:56:06 PM] [ERROR] cache_get_value_name_int: field 'discord_id' not found
+[11/18/2023 5:56:06 PM] [ERROR] cache_get_value_name_int: field 'verify_code' not found
+[11/18/2023 5:56:12 PM] [ERROR] cache_get_value_name_int: field 'verified' not found
+[11/18/2023 5:56:12 PM] [ERROR] cache_get_value_name_int: field 'discord_id' not found
+[11/18/2023 5:56:12 PM] [ERROR] cache_get_value_name_int: field 'verify_code' not found
+[11/18/2023 5:59:53 PM] [WARNING] mysql_connect: no password specified
+[11/18/2023 6:04:48 PM] [WARNING] mysql_connect: no password specified
+[11/18/2023 6:06:47 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 4:51:35 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 4:56:53 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number
+[11/20/2023 4:58:21 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number
+[11/20/2023 5:19:36 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 5:22:33 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 5:23:41 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number
+[11/20/2023 5:24:07 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number
+[11/20/2023 5:27:20 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 5:28:19 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 5:28:49 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number
+[11/20/2023 5:34:11 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 5:34:41 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number
+[11/20/2023 5:36:00 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 5:36:25 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number
+[11/20/2023 5:38:45 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 5:39:15 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number
+[11/20/2023 5:40:29 PM] [WARNING] mysql_connect: no password specified
+[11/20/2023 5:40:48 PM] [ERROR] cache_get_value_name_int: value 'NULL' is not a number

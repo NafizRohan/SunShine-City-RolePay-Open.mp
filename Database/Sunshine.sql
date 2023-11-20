@@ -47,7 +47,7 @@ CREATE TABLE `users` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 CREATE TABLE `vehicles`(
-  `id` int(11) NOT NULL,
+  `vid` int(11) NOT NULL,
   `model` int(3) DEFAULT 0,
   `price` int(11) DEFAULT 0,
   `owner_id` int(11) DEFAULT 0,
@@ -58,13 +58,16 @@ CREATE TABLE `vehicles`(
   `lights` int(11) DEFAULT '0',
   `tires` int(11) DEFAULT '0' ,
   `group_id` int(11) DEFAULT -1
-)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
+
+ALTER TABLE `vehicles`
+  ADD PRIMARY KEY (`vid`);
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -74,6 +77,10 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+COMMIT;
+
+ALTER TABLE `vehicles`
+  MODIFY `vid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 COMMIT;
 
 

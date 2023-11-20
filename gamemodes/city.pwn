@@ -5,13 +5,11 @@
 #define SSCANF_NO_NICE_FEATURES
 
 // Server Information
-
 #define SERVER_NAME         "Sunshine City RolePlay"
 #define SERVER_MODE         "Open.mp"
 #define SERVER_VERSION      "v1.0(beta)"
 #define SERVER_THEME        "{EAFF00}"
 #define DIALOG_TITLE        "{EAFF00}Sunshine City {FFFFFF} RolePlay"
-
 
 #include <sscanf2>
 #include <PAWN.CMD>
@@ -20,12 +18,12 @@
 	#define DCMD_PREFIX '-'
 	#include <discord-cmd>
 #endif
-#include "../gamemodes/modules/server/textdraws.pwn"
+
 main()
 {
     print("-------------------------------------------------");
     print("| GameMode: Open.mp                             |");
-    print("| Developer: Nafiz & Sibbir                     |");
+    print("| Developer: Nafiz                              |");
     print("-------------------------------------------------");
 }
 
@@ -58,7 +56,8 @@ enum PlayerData
     Float:pCameraZ,
     pCash,
     pBank,
-    pLoginTries
+    pLoginTries,
+    pLoggedin
 };
 new gPlayerData[MAX_PLAYERS][PlayerData];
 
@@ -73,153 +72,12 @@ enum // PLAYER DIALOGS
 };
  
 new ValidUser[MAX_PLAYERS];
-static ReturnPlayerName(playerid)
-{
-    new string[MAX_PLAYER_NAME];
-    GetPlayerName(playerid, string, MAX_PLAYER_NAME);
-    return string;
-}
 
-SetPlayerHealthEx(playerid, Float:Health)
-{
-    SetPlayerHealth(playerid, Health);
-    mysql_format(database, QueryOutput, sizeof(QueryOutput), "UPDATE users SET health = %f WHERE id = %i", Health, gPlayerData[playerid][pID]);
-    mysql_tquery(database, QueryOutput);
-}
+// Defines
+#include "../gamemodes/modules/server/textdraws.pwn"
+#include "../gamemodes/modules/defines/vars.pwn"
+#include "../gamemodes/modules/defines/colors.pwn"
 
-SetPlayerArmourEx(playerid, Float:Armour)
-{
-    SetPlayerHealth(playerid, Armour);
-    mysql_format(database, QueryOutput, sizeof(QueryOutput), "UPDATE users SET armour = %f WHERE id = %i", Armour, gPlayerData[playerid][pID]);
-    mysql_tquery(database, QueryOutput);
-}
-
-GivePlayerMoneyEx(playerid, Money)
-{
-    GivePlayerMoney(playerid, Money);
-    mysql_format(database, QueryOutput, sizeof(QueryOutput), "UPDATE users SET cash = %f WHERE id = %i", Money, gPlayerData[playerid][pID]);
-    mysql_tquery(database, QueryOutput);
-}
-
-ShowRegisterTD(playerid)
-{
-    TextDrawShowForPlayer(playerid, Background);
-    TextDrawShowForPlayer(playerid, Login_GTD[0]);
-    TextDrawShowForPlayer(playerid, Login_GTD[1]);
-    TextDrawShowForPlayer(playerid, Login_GTD[2]);
-    TextDrawShowForPlayer(playerid, Login_GTD[3]);
-    TextDrawShowForPlayer(playerid, Login_GTD[4]);
-    TextDrawShowForPlayer(playerid, Login_GTD[5]);
-    TextDrawShowForPlayer(playerid, Login_GTD[6]);
-    TextDrawShowForPlayer(playerid, Login_GTD[7]);
-    TextDrawShowForPlayer(playerid, Login_GTD[8]);
-    TextDrawShowForPlayer(playerid, Skin);
-    TextDrawShowForPlayer(playerid, Name);
-    TextDrawShowForPlayer(playerid, box_pass);
-    TextDrawShowForPlayer(playerid, box_gender);
-    TextDrawShowForPlayer(playerid, box_age);
-    TextDrawShowForPlayer(playerid, box_email);
-    TextDrawShowForPlayer(playerid, btn_register);
-    TextDrawShowForPlayer(playerid, web_url);
-    
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "");
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][1], "");
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][2], "");
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][3], "");
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][0]);
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][1]);
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][2]);
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][3]);
-    SelectTextDraw(playerid, 0xFF1E05FF);
-}
-
-HideRegisterTD(playerid)
-{
-    TextDrawHideForPlayer(playerid, Login_GTD[0]);
-    TextDrawHideForPlayer(playerid, Login_GTD[1]);
-    TextDrawHideForPlayer(playerid, Login_GTD[2]);
-    TextDrawHideForPlayer(playerid, Login_GTD[3]);
-    TextDrawHideForPlayer(playerid, Login_GTD[4]);
-    TextDrawHideForPlayer(playerid, Login_GTD[5]);
-    TextDrawHideForPlayer(playerid, Login_GTD[6]);
-    TextDrawHideForPlayer(playerid, Login_GTD[7]);
-    TextDrawHideForPlayer(playerid, Login_GTD[8]);
-    TextDrawHideForPlayer(playerid, Background);
-    TextDrawHideForPlayer(playerid, Skin);
-    TextDrawHideForPlayer(playerid, Name);
-    TextDrawHideForPlayer(playerid, box_pass);
-    TextDrawHideForPlayer(playerid, box_gender);
-    TextDrawHideForPlayer(playerid, box_age);
-    TextDrawHideForPlayer(playerid, box_email);
-    TextDrawHideForPlayer(playerid, btn_register);
-    TextDrawHideForPlayer(playerid, web_url);
-
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][0]);
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][1]);
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][2]);
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][3]);
-    CancelSelectTextDraw(playerid);
-}
-
-ShowLoginTD(playerid)
-{
-    TextDrawShowForPlayer(playerid, Background);
-    TextDrawShowForPlayer(playerid, Login_GTD[0]);
-    TextDrawShowForPlayer(playerid, Login_GTD[1]);
-    TextDrawShowForPlayer(playerid, Login_GTD[2]);
-    TextDrawShowForPlayer(playerid, Login_GTD[3]);
-    TextDrawShowForPlayer(playerid, Login_GTD[4]);
-    TextDrawShowForPlayer(playerid, Login_GTD[5]);
-    TextDrawShowForPlayer(playerid, Login_GTD[7]);
-    TextDrawShowForPlayer(playerid, Login_GTD[8]);
-    TextDrawShowForPlayer(playerid, Skin);
-    TextDrawShowForPlayer(playerid, Name);
-    TextDrawShowForPlayer(playerid, box_pass);
-    TextDrawShowForPlayer(playerid, box_gender);
-    TextDrawShowForPlayer(playerid, box_age);
-    TextDrawShowForPlayer(playerid, box_email);
-    TextDrawShowForPlayer(playerid, btn_register);
-    TextDrawShowForPlayer(playerid, web_url);
-    
-    PlayerTextDrawSetString(playerid, Login_PTD[playerid][0], "Enter Your Pass");
-    PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][2], 0.250, 1.500);
-    PlayerTextDrawLetterSize(playerid, Login_PTD[playerid][3], 0.270, 1.500);
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][0]);
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][1]);
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][2]);
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][3]);
-    PlayerTextDrawShow(playerid, Login_PTD[playerid][4]);
-    SelectTextDraw(playerid, 0xFF1E05FF);
-}
-
-HideLoginTD(playerid)
-{
-    TextDrawHideForPlayer(playerid, Login_GTD[0]);
-    TextDrawHideForPlayer(playerid, Login_GTD[1]);
-    TextDrawHideForPlayer(playerid, Login_GTD[2]);
-    TextDrawHideForPlayer(playerid, Login_GTD[3]);
-    TextDrawHideForPlayer(playerid, Login_GTD[4]);
-    TextDrawHideForPlayer(playerid, Login_GTD[5]);
-    TextDrawHideForPlayer(playerid, Login_GTD[7]);
-    TextDrawHideForPlayer(playerid, Login_GTD[8]);
-    TextDrawHideForPlayer(playerid, Background);
-    TextDrawHideForPlayer(playerid, Skin);
-    TextDrawHideForPlayer(playerid, Name);
-    TextDrawHideForPlayer(playerid, box_pass);
-    TextDrawHideForPlayer(playerid, box_gender);
-    TextDrawHideForPlayer(playerid, box_age);
-    TextDrawHideForPlayer(playerid, box_email);
-    TextDrawHideForPlayer(playerid, btn_register);
-    TextDrawHideForPlayer(playerid, web_url);
-
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][0]);
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][1]);
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][2]);
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][3]);
-    PlayerTextDrawHide(playerid, Login_PTD[playerid][4]);
-    CancelSelectTextDraw(playerid);
-}
- 
 public OnGameModeInit()
 {
     database = mysql_connect("127.0.0.1", "root", "", "samp");
@@ -249,9 +107,10 @@ public OnGameModeExit()
  
 public OnPlayerConnect(playerid)
 {
-    SendClientMessage(playerid, -1, "Connecting To SunShine City.........");
+    SendMessage(playerid, COLOR_AQUA, "Establishing connection with "SERVER_THEME""SERVER_NAME".....");
 
     //Resetting Player Data
+    gPlayerData[playerid][pTempPass] = 0;
     gPlayerData[playerid][pGender] = 0;
     gPlayerData[playerid][pAge] = 0;
     gPlayerData[playerid][pArmour] = 0;
@@ -267,21 +126,98 @@ public OnPlayerConnect(playerid)
     gPlayerData[playerid][pCameraZ] = 0.0;
     gPlayerData[playerid][pHealth] = 100.0;
     gPlayerData[playerid][pArmour] = 0.0;
+    gPlayerData[playerid][pLoggedin] = 0;
 
+    SendMessage(playerid, COLOR_AQUA, "Successfully connected with "SERVER_THEME""SERVER_NAME".");
     CreateLoginTDPlayer(playerid);
     CreateMyAssetsTDP(playerid);
     CreatePlayerDealerShipTD(playerid);
     return 1;
 }
 
+public OnPlayerRequestClass(playerid, classid)
+{
+    if(!gPlayerData[playerid][pLoggedin])
+    {   
+        ShowMainMenuCamera(playerid);
+    }
+    return 1;
+}
+
 public OnPlayerUpdate(playerid)
 {
-    GivePlayerMoney(playerid, gPlayerData[playerid][pCash]);
+    new pMoney = GetPlayerMoney(playerid);
+    if(pMoney != gPlayerData[playerid][pCash])
+    {
+        GivePlayerMoney(playerid, gPlayerData[playerid][pCash]);
+    }
+    return 1;
 }
- 
+
 public OnPlayerDisconnect(playerid, reason)
 {
     SavePlayerData(playerid);
+    return 1;
+}
+
+// Unofficial Functions
+
+forward LoadUserAccount(playerid);
+public LoadUserAccount(playerid)
+{
+    new result;
+    cache_get_row_count(result);
+    if(!result)
+    {
+        gPlayerData[playerid][pLoginTries]++;
+        if(gPlayerData[playerid][pLoginTries] < 5)
+        {
+            new string[128];
+            ShowDialogToPlayer(playerid, DIALOG_PLAYER_LOGIN);
+            format(string, sizeof(string), "Incorrect password. You have %i more attempts before you are kicked.", 5 - gPlayerData[playerid][pLoginTries]);
+            SendClientMessage(playerid, -1, string);
+            return 1;
+        }
+        else
+        {
+            Kick(playerid);
+        }
+    }
+    HideLoginTD(playerid);
+    // Loading User Information
+    cache_get_value_name_int(0, "id", gPlayerData[playerid][pID]);
+    cache_get_value_name_int(0, "verified", gPlayerData[playerid][pVerified]);
+    cache_get_value_name_int(0, "discord_id", gPlayerData[playerid][pDiscordID]);
+    cache_get_value_name_int(0, "verify_code", gPlayerData[playerid][pVerifyCode]);
+    // Loading User Position
+    cache_get_value_name_float(0, "pos_x", gPlayerData[playerid][pPosX]);
+    cache_get_value_name_float(0, "pos_y", gPlayerData[playerid][pPosY]);
+    cache_get_value_name_float(0, "pos_z", gPlayerData[playerid][pPosZ]);
+    cache_get_value_name_float(0, "facing_angle", gPlayerData[playerid][pPosA]);
+    cache_get_value_name_float(0, "camera_x", gPlayerData[playerid][pCameraX]);
+    cache_get_value_name_float(0, "camera_y", gPlayerData[playerid][pCameraY]);
+    cache_get_value_name_float(0, "camera_z", gPlayerData[playerid][pCameraZ]);
+    // Loading Health, Armour & Cash
+    cache_get_value_name_float(0, "health", gPlayerData[playerid][pHealth]);
+    cache_get_value_name_float(0, "armour", gPlayerData[playerid][pArmour]);
+    cache_get_value_name_int(0, "cash", gPlayerData[playerid][pCash]);
+    cache_get_value_name_int(0, "bank", gPlayerData[playerid][pBank]); 
+    // Loading Other Stuffs
+    cache_get_value_name_int(0, "skin", gPlayerData[playerid][pSkin]);
+    cache_get_value_name_int(0, "age", gPlayerData[playerid][pAge]);
+    cache_get_value_name_int(0, "gender", gPlayerData[playerid][pGender]);
+    cache_get_value_name(0, "email", gPlayerData[playerid][pEmail], 64);
+    gPlayerData[playerid][pLoggedin] = 1;
+
+    SetPlayerHealthEx(playerid, gPlayerData[playerid][pHealth]);
+    SetPlayerArmourEx(playerid, gPlayerData[playerid][pArmour]);
+    GivePlayerMoneyEx(playerid, gPlayerData[playerid][pCash]);
+    SetPlayerToSpawn(playerid);
+    ClearChat(playerid);
+
+    new welstr[128];
+    format(welstr, sizeof(welstr), "%s(%i) has joined the game.", ReturnPlayerName(playerid), playerid);
+    SendClientMessageToAll(COLOR_SYNTAX, welstr);
     return 1;
 }
 
@@ -293,7 +229,8 @@ public AfterRegister(playerid)
     SpawnPlayer(playerid);
     SetPlayerSkin(playerid, 299);
     SetPlayerColor(playerid, 0xffffffff);
-    SetPlayerPos(playerid, 0.0, 0.0, 5.0);
+    SetPlayerPos(playerid, 1182.6672, -1324.1490, 13.5789);
+    SetPlayerFacingAngle(playerid, 270.6595);
     SendClientMessage(playerid, -1, "Welcome to SunShine");
     gPlayerData[playerid][pSkin] = 299;
     gPlayerData[playerid][pHealth] = 100.0;
@@ -490,11 +427,20 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
             {
                 return SendClientMessage(playerid, -1, "Set your gender first.");
             }
-            mysql_format(database, QueryOutput, sizeof(QueryOutput), "INSERT INTO `users` (username, password, age, gender, email, lastlogin) VALUES(\"%s\", \"%s\", %i, %i, \"%s\", NOW())", ReturnPlayerName(playerid), gPlayerData[playerid][pTempPass], gPlayerData[playerid][pAge], gPlayerData[playerid][pGender], gPlayerData[playerid][pEmail]);
+            new email[64];
+            format(email, sizeof(email), "%s@gmail.com", gPlayerData[playerid][pEmail]);
+            mysql_format(database, QueryOutput, sizeof(QueryOutput), "INSERT INTO `users` (username, password, age, gender, email, lastlogin) VALUES(\"%s\", \"%s\", %i, %i, \"%s\", NOW())", ReturnPlayerName(playerid), gPlayerData[playerid][pTempPass], gPlayerData[playerid][pAge], gPlayerData[playerid][pGender], email);
             mysql_tquery(database, QueryOutput, "AfterRegister", "i", playerid);
         }
         else
         {
+            if(gPlayerData[playerid][pTempPass] == 0)
+            {
+                new string[128];
+                format(string, sizeof(string), "Incorrect password. You have %i more attempts before you are kicked.", 5 - gPlayerData[playerid][pLoginTries]);
+                SendClientMessage(playerid, -1, string);
+                return 1;
+            }
             new specifiers[] = "%D of %M, %Y @ %k:%i";
             mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT *, DATE_FORMAT(lastlogin, \"%s\") FROM users WHERE username = \"%s\" AND password = \"%s\"", specifiers, ReturnPlayerName(playerid), gPlayerData[playerid][pTempPass]);
             mysql_tquery(database, QueryOutput, "LoadUserAccount", "i", playerid);
@@ -566,86 +512,6 @@ ShowInterpolateCameraScenes(playerid)
     }
 }
 
-SetPlayerToSpawn(playerid)
-{
-    if(gPlayerData[playerid][pPosX] == 0.0 && gPlayerData[playerid][pPosY] == 0.0 && gPlayerData[playerid][pPosZ] == 0.0)
-    {
-        gPlayerData[playerid][pPosX] = 10.0;
-        gPlayerData[playerid][pPosY] = 10.0;
-        gPlayerData[playerid][pPosZ] = 10.0;
-    }
-    SetSpawnInfo(playerid, 0, gPlayerData[playerid][pSkin], gPlayerData[playerid][pPosX], gPlayerData[playerid][pPosY], gPlayerData[playerid][pPosZ], gPlayerData[playerid][pPosA]);
-    SpawnPlayer(playerid);
-    SetPlayerHealth(playerid, gPlayerData[playerid][pHealth]);
-}
-
-SavePlayerData(playerid)
-{
-    GetPlayerPos(playerid, gPlayerData[playerid][pPosX], gPlayerData[playerid][pPosY], gPlayerData[playerid][pPosZ]);
-    GetPlayerCameraPos(playerid, gPlayerData[playerid][pCameraX], gPlayerData[playerid][pCameraY], gPlayerData[playerid][pCameraZ]);
-    GetPlayerFacingAngle(playerid, gPlayerData[playerid][pPosA]);
-    GetPlayerHealth(playerid, gPlayerData[playerid][pHealth]);
-    GetPlayerArmour(playerid, gPlayerData[playerid][pArmour]);
-
-    mysql_format(database, QueryOutput, sizeof(QueryOutput), "UPDATE users SET pos_x = %f, pos_y = %f, pos_z = %f, facing_angle = %f,  camera_x = %f,  camera_y = %f,  camera_z = %f, health = %f, armour = %f, cash = %i, bank = %i, skin = %i",
-        gPlayerData[playerid][pPosX], gPlayerData[playerid][pPosY], gPlayerData[playerid][pPosZ], gPlayerData[playerid][pPosA], gPlayerData[playerid][pCameraX], gPlayerData[playerid][pCameraY], gPlayerData[playerid][pCameraZ],
-        gPlayerData[playerid][pHealth], gPlayerData[playerid][pArmour], gPlayerData[playerid][pCash], gPlayerData[playerid][pBank], gPlayerData[playerid][pSkin]);
-    mysql_tquery(database, QueryOutput);
-}
-
-forward LoadUserAccount(playerid);
-public LoadUserAccount(playerid)
-{
-    new result;
-    cache_get_row_count(result);
-    if(!result)
-    {
-        gPlayerData[playerid][pLoginTries]++;
-        if(gPlayerData[playerid][pLoginTries] < 5)
-        {
-            new string[128];
-            ShowDialogToPlayer(playerid, DIALOG_PLAYER_LOGIN);
-            format(string, sizeof(string), "Incorrect password. You have %i more attempts before you are kicked.", 5 - gPlayerData[playerid][pLoginTries]);
-            SendClientMessage(playerid, -1, string);
-            return 1;
-        }
-        else
-        {
-            Kick(playerid);
-        }
-    }
-    // Loading User Information
-    cache_get_value_name_int(0, "id", gPlayerData[playerid][pID]);
-    cache_get_value_name_int(0, "verified", gPlayerData[playerid][pVerified]);
-    cache_get_value_name_int(0, "discord_id", gPlayerData[playerid][pDiscordID]);
-    cache_get_value_name_int(0, "verify_code", gPlayerData[playerid][pVerifyCode]);
-    // Loading User Position
-    cache_get_value_name_float(0, "pos_x", gPlayerData[playerid][pPosX]);
-    cache_get_value_name_float(0, "pos_y", gPlayerData[playerid][pPosY]);
-    cache_get_value_name_float(0, "pos_z", gPlayerData[playerid][pPosZ]);
-    cache_get_value_name_float(0, "facing_angle", gPlayerData[playerid][pPosA]);
-    cache_get_value_name_float(0, "camera_x", gPlayerData[playerid][pCameraX]);
-    cache_get_value_name_float(0, "camera_y", gPlayerData[playerid][pCameraY]);
-    cache_get_value_name_float(0, "camera_z", gPlayerData[playerid][pCameraZ]);
-    // Loading Health, Armour & Cash
-    cache_get_value_name_float(0, "health", gPlayerData[playerid][pHealth]);
-    cache_get_value_name_float(0, "armour", gPlayerData[playerid][pArmour]);
-    cache_get_value_name_int(0, "cash", gPlayerData[playerid][pCash]);
-    cache_get_value_name_int(0, "bank", gPlayerData[playerid][pBank]); 
-    // Loading Other Stuffs
-    cache_get_value_name_int(0, "skin", gPlayerData[playerid][pSkin]);
-    cache_get_value_name_int(0, "age", gPlayerData[playerid][pAge]);
-    cache_get_value_name_int(0, "gender", gPlayerData[playerid][pGender]);
-    cache_get_value_name(0, "email", gPlayerData[playerid][pEmail], 64);
-
-    SetPlayerHealthEx(playerid, gPlayerData[playerid][pHealth]);
-    SetPlayerArmourEx(playerid, gPlayerData[playerid][pArmour]);
-    GivePlayerMoneyEx(playerid, gPlayerData[playerid][pCash]);
-    SetPlayerToSpawn(playerid);
-    HideLoginTD(playerid);
-    return 1;
-}
-
 GetPlayerLastLogin(playerid)
 {
     new Cache:data, lastlogin[128];
@@ -697,8 +563,8 @@ GetPlayerGender(playerid)
     new string[128];
     switch(gender)
     {
-        case 0: format(string, sizeof(string), "Male");
-        case 1: format(string, sizeof(string), "FeMale");
+        case 1: format(string, sizeof(string), "Male");
+        case 2: format(string, sizeof(string), "FeMale");
     }
     
     cache_delete(data);
@@ -730,16 +596,4 @@ public CheckValidUser(playerid)
     
     ShowLoginTD(playerid);
     return 1;
-}
-
-
-ShowMainMenuCamera(playerid) 
-{
-    ShowInterpolateCameraScenes(playerid);
-    mysql_format(database, QueryOutput, sizeof(QueryOutput), "SELECT id FROM users WHERE username = \"%s\"", ReturnPlayerName(playerid));
-    mysql_tquery(database, QueryOutput, "CheckValidUser", "i", playerid);
-}
-public OnPlayerRequestClass(playerid, classid)
-{
-    ShowMainMenuCamera(playerid);
 }
